@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="libraryTable">
+    <library name="main">
+      <CLASSES />
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/../Libraries/reportng-master.zip!/reportng-master/reportng/src/java/main" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/reportng-master.zip!/reportng-master/reportng/src/java/test" />
+      </SOURCES>
+    </library>
+    <library name="src">
+      <CLASSES />
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/core/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/core/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/examples/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/assistedinject/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/assistedinject/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/dagger-adapter/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/dagger-adapter/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/grapher/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/grapher/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/jmx/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/jmx/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/jndi/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/mini/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/mini/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/persist/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/persist/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/service/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/service/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/servlet/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/servlet/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/spring/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/spring/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/struts2/example/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/struts2/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/struts2/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/testlib/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/testlib/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/throwingproviders/src" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/extensions/throwingproviders/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/jdk8-tests/test" />
+        <root url="jar://$PROJECT_DIR$/../Libraries/guice-master.zip!/guice-master/lib/build/jdiff" />
+      </SOURCES>
+    </library>
+    <library name="velocity-dep-1.4">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/../Libraries/velocity-dep-1.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
+</project>
