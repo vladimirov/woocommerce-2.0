@@ -15,8 +15,8 @@ public class SessionHelper extends HelperBase {
     private By wpLoginButtonLocator = By.name("wp-submit");
 
     public void loginToAdmin(String username, String password) {
-        waitToBePresent(loginFormLocator);
-        click(loginFormLocator);
+//        waitToBePresent(loginFormLocator);
+//        click(loginFormLocator);
         type(usernameLocator, username);
         type(passwordLocator, password);
         click(wpLoginButtonLocator);

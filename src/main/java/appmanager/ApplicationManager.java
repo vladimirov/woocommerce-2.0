@@ -44,13 +44,13 @@ public class ApplicationManager {
 //        dbHelper = new DbHelper();
         switch (browser) {
             case BrowserType.CHROME: {
-                System.setProperty("webdriver.chrome.driver", "C:\\Projects\\Addressbook\\src\\main\\resources\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "C:\\Projects\\Woocommerce\\src\\main\\resources\\chromedriver.exe");
                 DesiredCapabilities capabilities = DesiredCapabilities.chrome();
                 driver = new ChromeDriver(capabilities);
                 break;
             }
             case BrowserType.FIREFOX: {
-                System.setProperty("webdriver.firefox.driver", "C:\\Projects\\Addressbook\\src\\main\\resources\\geckodriver.exe");
+                System.setProperty("webdriver.firefox.driver", "C:\\Projects\\Woocommerce\\src\\main\\resources\\geckodriver.exe");
                 DesiredCapabilities capabilities = DesiredCapabilities.firefox();
                 driver = new FirefoxDriver(capabilities);
                 break;
@@ -67,9 +67,7 @@ public class ApplicationManager {
         adminOrderPage = new AdminOrderPage(driver);
         adminProductPage = new AdminProductPage(driver);
         adminProductsDownloadablePage = new AdminProductsDownloadablePage(driver);
-
         adminSettingsGeneralPage = new AdminSettingsGeneralPage(driver);
-
 
     }
 
@@ -93,6 +91,10 @@ public class ApplicationManager {
         return siteHelper;
     }
 
+    public AdminHelper adminHelper() {
+        return adminHelper;
+    }
+
     public AdminCouponPage adminCouponPage() {
         return adminCouponPage;
     }
@@ -112,5 +114,6 @@ public class ApplicationManager {
     public AdminSettingsGeneralPage adminSettingsGeneralPage() {
         return adminSettingsGeneralPage;
     }
+
 
 }
