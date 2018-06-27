@@ -1,12 +1,17 @@
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.*;
+
 public class ShopTest extends TestBase{
 
-//    @Test (priority = 1)
+//    @Test(priority = 1)
 //    public void addProductToCart() {
-//        cartPage.openEmptyCartPage();
+//        app.cartPage().openEmptyCartPage();
 //        cartPage.returnToShopButtonClick();
 //        shopPage.addToCartButtonClick();
 //        shopPage.viewCartButtonClick();
-//        Assert.assertTrue(cartPage.removeButtonIsDisplayed());
+//        assertTrue(cartPage.removeButtonIsDisplayed());
 //        cartPage.removeFromCartButtonClick();
 //    }
 //

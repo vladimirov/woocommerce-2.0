@@ -5,7 +5,7 @@ import static org.testng.Assert.assertTrue;
 
 public class AdminCouponNew extends TestBase {
 
-    @Test
+    @Test(groups = {"admin"})
     public void addNewCoupon() {
         app.loginToAdmin();
         app.adminCouponPage().clickOnWooCommerceMenu();

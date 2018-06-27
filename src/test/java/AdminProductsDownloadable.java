@@ -1,28 +1,31 @@
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertTrue;
 
-public class AdminProductsDownloadable extends TestBase{
 
-//    @Test (groups = {"admin"})
-//    public void canUpdateSettings() {
-//        adminProductsDownloadablePage.clickOnProductsTab();
-//        adminProductsDownloadablePage.clickOnDownloadableProductsTab();
-//
-//        Assert.assertTrue(adminProductsDownloadablePage.checkDownloadableProductsUrl());
-//
-//        adminProductsDownloadablePage.selectFileDownloadMethod();
-//        adminProductsDownloadablePage.checkDownloadsRequireLogin();
-//        adminProductsDownloadablePage.checkGrantAccessAfterPayment();
-//        adminProductsDownloadablePage.saveChanges();
-//
-//        Assert.assertTrue(adminProductsDownloadablePage.successMessageIsDisplayed());
-//
-//        adminProductsDownloadablePage.selectFileDownloadMethodBack();
-//        adminProductsDownloadablePage.checkDownloadsRequireLogin();
-//        adminProductsDownloadablePage.checkGrantAccessAfterPayment();
-//        adminProductsDownloadablePage.saveChanges();
-//
-//        Assert.assertTrue(adminProductsDownloadablePage.successMessageIsDisplayed());
-//    }
+public class AdminProductsDownloadable extends TestBase {
+
+    @Test(groups = {"admin"})
+    public void canUpdateSettings() {
+        app.loginToAdmin();
+
+        app.adminProductsDownloadablePage().clickOnProductsTab();
+        app.adminProductsDownloadablePage().clickOnDownloadableProductsTab();
+
+//        assertTrue(app.adminProductsDownloadablePage().checkDownloadableProductsUrl());
+
+        app.adminProductsDownloadablePage().selectFileDownloadMethod();
+        app.adminProductsDownloadablePage().checkDownloadsRequireLogin();
+        app.adminProductsDownloadablePage().checkGrantAccessAfterPayment();
+        app.adminProductsDownloadablePage().saveChanges();
+
+        assertTrue(app.adminProductsDownloadablePage().successMessageIsDisplayed());
+
+        app.adminProductsDownloadablePage().selectFileDownloadMethodBack();
+        app.adminProductsDownloadablePage().checkDownloadsRequireLogin();
+        app.adminProductsDownloadablePage().checkGrantAccessAfterPayment();
+        app.adminProductsDownloadablePage().saveChanges();
+
+        assertTrue(app.adminProductsDownloadablePage().successMessageIsDisplayed());
+    }
 }

@@ -1,19 +1,20 @@
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertTrue;
 
-public class AdminOrderNew extends TestBase{
 
-    @Test (groups = {"admin"})
+public class AdminOrderNew extends TestBase {
+
+    @Test(groups = {"admin"})
     public void addNewOrder() {
         app.loginToAdmin();
         app.adminOrderPage().goToOrdersMenu();
-//        adminOrderPage.clickOnAddOrderButton();
-//        adminOrderPage.clickOnOrderStatusField();
-//        adminOrderPage.changeOrderStatus();
-//        adminOrderPage.clickOnCreateButton();
-//
-//        Assert.assertTrue(adminOrderPage.orderNoteMessageIsDisplayed());
+        app.adminOrderPage().clickOnAddOrderButton();
+        app.adminOrderPage().clickOnOrderStatusField();
+        app.adminOrderPage().changeOrderStatus();
+        app.adminOrderPage().clickOnCreateButton();
+
+        assertTrue(app.adminOrderPage().orderNoteMessageIsDisplayed());
 
     }
 }

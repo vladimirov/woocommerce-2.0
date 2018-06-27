@@ -68,7 +68,13 @@ public class ApplicationManager {
         adminProductPage = new AdminProductPage(driver);
         adminProductsDownloadablePage = new AdminProductsDownloadablePage(driver);
         adminSettingsGeneralPage = new AdminSettingsGeneralPage(driver);
-
+        adminTaxPage = new AdminTaxPage(driver);
+        cartPage = new CartPage(driver);
+        checkoutPage = new CheckoutPage(driver);
+        homePage = new HomePage(driver);
+        myAccountPage = new MyAccountPage(driver);
+        productPage = new ProductPage(driver);
+        shopPage = new ShopPage(driver);
     }
 
     public void loginToAdmin() {
@@ -115,5 +121,31 @@ public class ApplicationManager {
         return adminSettingsGeneralPage;
     }
 
+    public AdminTaxPage adminTaxPage() {
+        return adminTaxPage;
+    }
 
+    public CartPage cartPage() {
+        return cartPage;
+    }
+
+    public CheckoutPage checkoutPage() {
+        return checkoutPage;
+    }
+
+    public HomePage homePage() {
+        return homePage;
+    }
+
+    public MyAccountPage myAccountPage() {
+        return myAccountPage;
+    }
+
+    public ProductPage productPage() {
+        return productPage;
+    }
+
+    public ShopPage shopPage() {
+        return shopPage;
+    }
 }

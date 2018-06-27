@@ -4,21 +4,23 @@ import org.testng.annotations.Test;
 
 public class CreateProductTest extends TestBase{
 
-//    @Test(groups = {"admin"})
-//    public void addNewProduct() {
-//        adminProductPage.clickOnProductsMenu();
-//        adminProductPage.clickOnAddNewProductButton();
-//        adminProductPage.insertProductName();
-//        adminProductPage.insertProductDescription();
-//        adminProductPage.waitToBePresentSamplePermalink();
-//        adminProductPage.insertRegularPrice();
-//        adminProductPage.clickOnInventoryTab();
-//        adminProductPage.insertProductShortDescription();
-//        adminProductPage.clickOnPublishButton();
-//        adminProductPage.goToBasePage();
-//        adminProductPage.findNewProductOnSite();
-//
-//        Assert.assertEquals(adminProductPage.name, productPage.actualProductName());
-//        Assert.assertEquals(adminProductPage.price, productPage.actualProductPrice());
-//    }
+    @Test(groups = {"admin"})
+    public void addNewProduct() {
+        app.loginToAdmin();
+
+        app.adminProductPage().clickOnProductsMenu();
+        app.adminProductPage().clickOnAddNewProductButton();
+        app.adminProductPage().insertProductName();
+        app.adminProductPage().insertProductDescription();
+        app.adminProductPage().waitToBePresentSamplePermalink();
+        app.adminProductPage().insertRegularPrice();
+        app.adminProductPage().clickOnInventoryTab();
+        app.adminProductPage().insertProductShortDescription();
+        app.adminProductPage().clickOnPublishButton();
+        app.adminProductPage().goToBasePage();
+        app.adminProductPage().findNewProductOnSite();
+
+        Assert.assertEquals(app.adminProductPage().name, app.productPage().actualProductName());
+        Assert.assertEquals(app.adminProductPage().price, app.productPage().actualProductPrice());
+    }
 }
