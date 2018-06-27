@@ -6,7 +6,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import pages.AdminHelper;
 
 import java.io.File;
 import java.io.FileReader;
@@ -18,12 +17,10 @@ public class ApplicationManager {
     WebDriver driver;
     private String browser;
 
-    private SiteHelper siteHelper;
     private SessionHelper sessionHelper;
+    private SiteHelper siteHelper;
     private AdminHelper adminHelper;
-//    private DbHelper dbHelper;
-//    private ContactHelper contactHelper;
-//    private GroupHelper groupHelper;
+
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -55,9 +52,8 @@ public class ApplicationManager {
         }
         driver.manage().window().maximize();
 
-        adminHelper = new AdminHelper(driver);
-        pageSpeedHelper = new PageSpeedHelper(driver);
         siteHelper = new SiteHelper(driver);
+        adminHelper = new AdminHelper(driver);
     }
 
     public void loginToAdmin() {
@@ -70,25 +66,9 @@ public class ApplicationManager {
         driver.get(properties.getProperty("web.baseUrl"));
     }
 
-    public void openPageSpeedUrl() {
-        driver.get(properties.getProperty("web.pageSpeedUrl"));
-    }
-
-    public void openPageNotFoundUrl() {
-        driver.get(properties.getProperty("web.baseUrl") + "404");
-    }
 
     public void stop() {
         driver.quit();
-    }
-
-//
-//    public PageSpeedHelper pageSpeed() {
-//        return pageSpeedHelper;
-//    }
-//
-    public AdminHelper admin() {
-        return adminPage;
     }
 
     public SiteHelper site() {
