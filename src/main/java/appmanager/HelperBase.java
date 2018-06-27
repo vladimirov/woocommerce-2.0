@@ -4,6 +4,7 @@ package appmanager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -62,6 +63,17 @@ public class HelperBase {
         driver.findElement(locator).submit();
     }
 
+    protected void clear(By locator) {
+        logger.info("WAIT ELEMENT TO BE PRESENT AND CLEAR: " + locator);
+        try {
+            element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            element.clear();
+        } catch (StaleElementReferenceException ignored) {
+            element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            element.clear();
+        }
+    }
+
     protected void attach(By locator, File file) {
         if (file != null) {
             driver.findElement(locator).sendKeys(file.getAbsolutePath());
@@ -99,6 +111,17 @@ public class HelperBase {
         }
     }
 
+    protected void waitToBeStale(By locator) {
+        logger.info("WAIT ELEMENT TO BE STALE: " + locator);
+        try {
+            element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            wait.until(ExpectedConditions.stalenessOf(element));
+        } catch (StaleElementReferenceException ignored) {
+            element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            wait.until(ExpectedConditions.stalenessOf(element));
+        }
+    }
+
     protected void hoverOnElement(By locator) {
         logger.info("HOVER ON ELEMENT: " + locator);
         element = driver.findElement(locator);
@@ -121,11 +144,14 @@ public class HelperBase {
         }
     }
 
-    public boolean isElementPresent(By locator) {
+    protected boolean isElementOnPage(By locator) {
+        logger.info("TRY TO FIND ELEMENT: " + locator);
         try {
+            logger.info("ELEMENT IS ON PAGE: " + locator);
             driver.findElement(locator);
             return true;
         } catch (NoSuchElementException e) {
+            logger.info("ELEMENT IS NOT FOUND: " + locator);
             return false;
         }
     }
@@ -168,17 +194,40 @@ public class HelperBase {
         return element.getText().equals(text);
     }
 
+    protected boolean elementHasClass(String active, By locator) {
+        logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
+        element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+
+        String classes = element.getAttribute("class");
+        for (String c : classes.split("-")) {
+            if (c.equals(active)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    protected boolean getPageUrl(String expectedUrl) {
+        String currentUrl = driver.getCurrentUrl();
+        if (expectedUrl.equals(currentUrl)) {
+            logger.info("ACTUAL PAGE: " + expectedUrl);
+            return true;
+        } else {
+            logger.info("EXPECTED PAGE: " + expectedUrl);
+            logger.info("ACTUAL PAGE:   " + driver.getCurrentUrl());
+            return false;
+        }
+    }
+
+    protected boolean elementHasValue(String expectedValue, By locator) {
+        logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
+        element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+
+        logger.info("EXPECTED VALUE: " + expectedValue);
+        logger.info("ACTUAL VALUE:   " + element.getAttribute("value"));
+
+        return element.getAttribute("value").equals(expectedValue);
+    }
+
 }
-
-
-//    protected void type(By locator, String text) {
-//        click(locator);
-//        if (text != null) {
-//            String existingText = driver.findElement(locator).getAttribute("value");
-//            if (!text.equals(existingText)) {
-//                driver.findElement(locator).clear();
-//                driver.findElement(locator).sendKeys(text);
-//            }
-//        }
-//    }
 

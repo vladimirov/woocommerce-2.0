@@ -20,7 +20,18 @@ public class ApplicationManager {
     private SessionHelper sessionHelper;
     private SiteHelper siteHelper;
     private AdminHelper adminHelper;
-
+    private AdminCouponPage adminCouponPage;
+    private AdminOrderPage adminOrderPage;
+    private AdminProductPage adminProductPage;
+    private AdminProductsDownloadablePage adminProductsDownloadablePage;
+    private AdminSettingsGeneralPage adminSettingsGeneralPage;
+    private AdminTaxPage adminTaxPage;
+    private CartPage cartPage;
+    private CheckoutPage checkoutPage;
+    private HomePage homePage;
+    private MyAccountPage myAccountPage;
+    private ProductPage productPage;
+    private ShopPage shopPage;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -30,9 +41,7 @@ public class ApplicationManager {
     public void init() throws IOException {
         String target = System.getProperty("target", "local");
         properties.load(new FileReader(new File(String.format("src/main/resources/%s.properties", target))));
-
 //        dbHelper = new DbHelper();
-
         switch (browser) {
             case BrowserType.CHROME: {
                 System.setProperty("webdriver.chrome.driver", "C:\\Projects\\Addressbook\\src\\main\\resources\\chromedriver.exe");
@@ -54,6 +63,14 @@ public class ApplicationManager {
 
         siteHelper = new SiteHelper(driver);
         adminHelper = new AdminHelper(driver);
+        adminCouponPage = new AdminCouponPage(driver);
+        adminOrderPage = new AdminOrderPage(driver);
+        adminProductPage = new AdminProductPage(driver);
+        adminProductsDownloadablePage = new AdminProductsDownloadablePage(driver);
+
+        adminSettingsGeneralPage = new AdminSettingsGeneralPage(driver);
+
+
     }
 
     public void loginToAdmin() {
@@ -71,8 +88,29 @@ public class ApplicationManager {
         driver.quit();
     }
 
+
     public SiteHelper site() {
         return siteHelper;
+    }
+
+    public AdminCouponPage adminCouponPage() {
+        return adminCouponPage;
+    }
+
+    public AdminOrderPage adminOrderPage() {
+        return adminOrderPage;
+    }
+
+    public AdminProductPage adminProductPage() {
+        return adminProductPage;
+    }
+
+    public AdminProductsDownloadablePage adminProductsDownloadablePage() {
+        return adminProductsDownloadablePage;
+    }
+
+    public AdminSettingsGeneralPage adminSettingsGeneralPage() {
+        return adminSettingsGeneralPage;
     }
 
 }
