@@ -1,51 +1,55 @@
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.*;
 
 
 public class GeneralSettingsTest extends TestBase {
 
-//    @Test(groups = {"admin"}, priority = 1)
-//    public void updateGeneralSettings() {
-//        app.loginToAdmin();
-//        app.adminSettingsGeneralPage().clickOnWooCommerceMenu();
-//        app.adminSettingsGeneralPage().clickOnSettingsMenu();
-//
-//        Assert.assertTrue(app.adminSettingsGeneralPage().generalTabIsActive());
-//    }
-
-    @Test(groups = {"admin"}, priority = 2)
-    public void selectSellingLocation() {
+    @BeforeMethod
+    public void gotoWoocommerceSettings(){
         app.loginToAdmin();
         app.adminSettingsGeneralPage().clickOnWooCommerceMenu();
         app.adminSettingsGeneralPage().clickOnSettingsMenu();
-        app.adminSettingsGeneralPage().clickOnSellingLocationDropdown();
-        app.adminSettingsGeneralPage().clickOnSetToAllCountriesItem();
-        app.adminSettingsGeneralPage().saveChanges();
-
-        Assert.assertTrue(app.adminSettingsGeneralPage().successMessageIsDisplayed());
     }
+
+//    @Test(groups = {"admin"}, priority = 1)
+//    public void updateGeneralSettings() {
+//        assertTrue(app.adminSettingsGeneralPage().generalTabIsActive());
+//    }
 //
-//    //    @Test (priority = 3, groups = {"admin"})
+//    @Test(groups = {"admin"}, priority = 2)
+//    public void selectSellingLocation() {
+//        app.adminSettingsGeneralPage().clickOnSellingLocationDropdown();
+//        app.adminSettingsGeneralPage().clickOnSetToAllCountriesItem();
+//        app.adminSettingsGeneralPage().saveChanges();
+//
+//        assertTrue(app.adminSettingsGeneralPage().successMessageIsDisplayed());
+//    }
+//
+//    @Test(groups = {"admin"}, priority = 3)
 //    public void setBaseLocation() {
 //        app.adminSettingsGeneralPage().clickOnBaseLocationDropdown();
 //        app.adminSettingsGeneralPage().setBaseLocation();
 //        app.adminSettingsGeneralPage().saveChanges();
 //
-//        Assert.assertTrue(app.adminSettingsGeneralPage().successMessageIsDisplayed());
+//        assertTrue(app.adminSettingsGeneralPage().successMessageIsDisplayed());
 //    }
-//
-//    //    @Test (priority = 4, groups = {"admin"})
-//    public void setSellToSpecificCountries() {
-//        app.adminSettingsGeneralPage().clickOnSellingLocationDropdown();
-//        app.adminSettingsGeneralPage().chooseSellToSpecificCountriesItem();
-//        app.adminSettingsGeneralPage().clickOnChooseCountriesInputField();
-//        app.adminSettingsGeneralPage().chooseFromSpecificCountriesSuggestions();
-//        app.adminSettingsGeneralPage().saveChanges();
-//
-//        Assert.assertTrue(app.adminSettingsGeneralPage().successMessageIsDisplayed());
-//    }
+
+    @Test(groups = {"admin"}, priority = 4)
+    public void setSellToSpecificCountries() {
+        app.adminSettingsGeneralPage().clickOnSellingLocationDropdown();
+        app.adminSettingsGeneralPage().chooseSellToSpecificCountriesItem();
+
+        app.adminSettingsGeneralPage().clickOnChooseCountriesInputField();
+        app.adminSettingsGeneralPage().chooseFromSpecificCountriesSuggestions();
+        app.adminSettingsGeneralPage().saveChanges();
+
+        assertTrue(app.adminSettingsGeneralPage().successMessageIsDisplayed());
+    }
 //
 //    @Test(priority = 5, groups = {"admin"})
 //    public void setCurrencyOptions() {
