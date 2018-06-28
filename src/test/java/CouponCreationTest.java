@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertTrue;
 
 
-public class AdminCouponNew extends TestBase {
+public class CouponCreationTest extends TestBase {
 
     @Test(groups = {"admin"})
     public void addNewCoupon() {

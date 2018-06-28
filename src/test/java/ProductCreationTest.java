@@ -2,7 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class CreateProductTest extends TestBase{
+public class ProductCreationTest extends TestBase{
 
     @Test(groups = {"admin"})
     public void addNewProduct() {
