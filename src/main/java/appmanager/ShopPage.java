@@ -21,10 +21,10 @@ public class ShopPage extends HelperBase {
 
     private By addToCartButtonLocator = By.cssSelector("button.single_add_to_cart_button");
     private By productTitleLocator = By.className("woocommerce-loop-product__title");
+    private By shopMenuLocator = By.linkText("Shop");
 
-    public ShopPage openShopPage() {
-//        goToPage(shopPageURL);
-        return this;
+    public void openShopPage() {
+        click(shopMenuLocator);
     }
 
     public ShopPage openRandomProduct() {
@@ -34,7 +34,6 @@ public class ShopPage extends HelperBase {
     }
 
     public ShopPage openFirstProductPageAndAddToCart() {
-//        goToPage(productOneUrl);
         click(addToCartButtonLocator);
         return this;
     }
@@ -45,11 +44,10 @@ public class ShopPage extends HelperBase {
         return this;
     }
 
-    public ShopPage clickOnAddToCartButton() {
+    public ShopPage addProductToCart() {
         click(addToCartButtonLocator);
         return this;
     }
-
 
 
 }

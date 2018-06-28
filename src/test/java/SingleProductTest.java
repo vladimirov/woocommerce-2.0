@@ -11,7 +11,7 @@ public class SingleProductTest extends TestBase{
 //        Assert.assertTrue(cartPage.emptyCartTextIsDisplayed());
 //
 //        //Create simple product
-//        login.loginToAdmin();
+//        login.openAdminUrl();
 //        adminProductPage.clickOnProductsMenu();
 //        adminProductPage.clickOnAddNewProductButton();
 //        adminProductPage.insertProductName();
@@ -26,7 +26,7 @@ public class SingleProductTest extends TestBase{
 //
 //        //Set new qty and add simple product to cart
 //        productPage.setNewQty();
-//        productPage.clickOnAddToCartButton();
+//        productPage.addProductToCart();
 //        cartPage.openCartPage();
 //
 //        //Check name and qty of the simple product
@@ -41,7 +41,7 @@ public class SingleProductTest extends TestBase{
 //        Assert.assertTrue(cartPage.emptyCartTextIsDisplayed());
 //
 //        //Create variable product
-//        login.loginToAdmin();
+//        login.openAdminUrl();
 //        adminProductPage.clickOnProductsMenu();
 //        adminProductPage.clickOnAddNewProductButton();
 //        adminProductPage.insertProductName();

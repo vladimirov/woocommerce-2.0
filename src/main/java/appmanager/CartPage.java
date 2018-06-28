@@ -6,7 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.DataConverter;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 
 public class CartPage extends HelperBase {
@@ -17,7 +22,6 @@ public class CartPage extends HelperBase {
 
     ProductPage productPage = new ProductPage(driver);
 
-    private String cartPageURL = "baseUrl" + "/cart";
     private String emptyCartText = "Your cart is currently empty.";
     private String flyingNinjaText = "Flying Ninja";
     private String happyNinjaText = "Happy Ninja";
@@ -42,12 +46,6 @@ public class CartPage extends HelperBase {
     private By totalPriceLocator = By.xpath("//*[@id='post-5']/div/div/form/table/tbody/tr[1]/td[6]/span");
     private By proceedToCheckoutButton = By.cssSelector("a.checkout-button.button.alt.wc-forward");
 
-
-
-    public CartPage openCartPage() {
-//        goToPage(cartPageURL);
-        return this;
-    }
 
     public ProductData validateProductDataInCart() {
         waitToBePresent(productNameInCartLocator);

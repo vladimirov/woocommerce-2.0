@@ -1,4 +1,3 @@
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -7,9 +6,10 @@ import static org.testng.Assert.*;
 
 public class AdminTaxTest extends TestBase {
 
+    //TODO Extract in one class
     @BeforeMethod
     public void gotoWoocommerceSettings() {
-        app.loginToAdmin();
+        app.openAdminUrl();
         app.adminSettingsGeneralPage().clickOnWooCommerceMenu();
         app.adminSettingsGeneralPage().clickOnSettingsMenu();
     }
@@ -38,6 +38,5 @@ public class AdminTaxTest extends TestBase {
 
         assertTrue(app.adminTaxPage().newAdditionalTaxClassIsDisplayed());
     }
-
 
 }

@@ -6,7 +6,7 @@ public class ProductCreationTest extends TestBase{
 
     @Test(groups = {"admin"})
     public void addNewProduct() {
-        app.loginToAdmin();
+        app.openAdminUrl();
 
         app.adminProductPage().clickOnProductsMenu();
         app.adminProductPage().clickOnAddNewProductButton();

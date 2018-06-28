@@ -77,7 +77,7 @@ public class ApplicationManager {
         shopPage = new ShopPage(driver);
     }
 
-    public void loginToAdmin() {
+    public void openAdminUrl() {
         driver.get(properties.getProperty("web.adminUrl"));
         sessionHelper = new SessionHelper(driver);
         sessionHelper.loginToAdmin(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
@@ -86,6 +86,11 @@ public class ApplicationManager {
     public void openBaseUrl() {
         driver.get(properties.getProperty("web.baseUrl"));
     }
+
+    public void openCartPage() {
+        driver.get(properties.getProperty("web.baseUrl") + "cart");
+    }
+
 
     public void stop() {
         driver.quit();
