@@ -16,12 +16,14 @@ public class AdminOrderPage extends HelperBase {
     private By ordersMenuLocator = By.xpath("//ul[@class='wp-submenu wp-submenu-wrap']/li[2]/a[@href='edit.php?post_type=shop_order']");
     private By addOrderButtonLocator = By.xpath("//*[@id='wpbody-content']/div[3]/a[1]");
     private By orderStatusDropdownLocator = By.id("select2-order_status-container");
-    private By orderStatusProcessingLocator = By.xpath("//span[contains(@class, 'select2-results')]/ul[1]/li[2]");
-    private By createButtonLocator = By.xpath("//*[@id='woocommerce-order-actions']/div/ul/li[2]/input");
+    private By orderStatusProcessingLocator = By.xpath("//select[@id='order_status']/option[2]");
+    private By createButtonLocator = By.name("save");
     private By noteTextLocator = By.cssSelector("div.note_content");
     private By orderListLocator = By.id("the-list");
     private By moveToTrashButtonLocator = By.className("submitdelete");
     private By noOrdersFoundLocator = By.className("colspanchange");
+    private By orderHeadingLocator = By.cssSelector("h2.woocommerce-order-data__heading");
+    private By orderHeadingInOrdersLocator = By.cssSelector("a.order-view");
 
 
     public AdminOrderPage goToOrdersMenu() {
@@ -63,6 +65,15 @@ public class AdminOrderPage extends HelperBase {
 
     public boolean noOrdersFoundTextIsDisplayed() {
         return textIsDisplayed(noOrdersFoundText, noOrdersFoundLocator);
+    }
+
+    public String orderNumberOnOrderCreationPage() {
+
+        return extractElementPartialText(orderHeadingLocator, 7, 9);
+    }
+
+    public String orderNumberOnOrdersListPage() {
+        return extractElementPartialText(orderHeadingInOrdersLocator, 1, 3);
     }
 
 }

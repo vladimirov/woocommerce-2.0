@@ -229,5 +229,12 @@ public class HelperBase {
         return element.getAttribute("value").equals(expectedValue);
     }
 
+    protected String extractElementPartialText(By locator, int beginIndex, int endIndex) {
+        logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
+        element = wait.until(presenceOfElementLocated(locator));
+        logger.info("ELEMENT PARTIAL TEXT IS: " + element.getText().substring(beginIndex, endIndex));
+        return element.getText().substring(beginIndex, endIndex);
+    }
+
 }
 
