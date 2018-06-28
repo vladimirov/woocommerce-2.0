@@ -36,6 +36,7 @@ public class GeneralSettingsTest extends TestBase {
         assertTrue(app.adminSettingsGeneralPage().successMessageIsDisplayed());
     }
 
+    //TODO
     @Test(groups = {"admin"}, priority = 4, enabled = false)
     public void setSellToSpecificCountries() {
         app.adminSettingsGeneralPage().clickOnSellingLocationDropdown();
