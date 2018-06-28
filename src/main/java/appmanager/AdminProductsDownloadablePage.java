@@ -9,20 +9,18 @@ public class AdminProductsDownloadablePage extends HelperBase {
         super(driver);
     }
 
-//    String expectedUrl = baseUrl + "/wp-admin/admin.php?page=wc-settings&tab=products&section=downloadable";
-    String successMessage = "Your settings have been saved.";
+    private String successMessage = "Your settings have been saved.";
 
     private By wooCommerceMenuLocator = By.id("toplevel_page_woocommerce");
     private By settingsMenuLocator = By.xpath("//*[@id='toplevel_page_woocommerce']/ul/li[5]/a");
     private By productsTabLocator = By.xpath("//*[@id='mainform']/nav/a[2]");
-    private By downloadableProductsTabLocator = By.xpath("//*[@id='mainform']/ul/li[4]/a");
+    private By downloadableProductsLocator = By.linkText("Downloadable products");
     private By fileDownloadMethodLocator = By.id("select2-woocommerce_file_download_method-container");
     private By redirectOnlyItemLocator = By.xpath("//span[contains(@class, 'select2-results')]/ul[1]/li[3]");
     private By forceDownloadsItemLocator = By.xpath("//span[contains(@class, 'select2-results')]/ul[1]/li[1]");
-
     private By downloadsRequireLoginLocator = By.id("woocommerce_downloads_require_login");
     private By grantAccessAfterPaymentLocator = By.id("woocommerce_downloads_grant_access_after_payment");
-    private By saveChangesButtonLocator = By.xpath("//*[@id='mainform']/p/input[1]");
+    private By saveChangesButtonLocator = By.name("save");
     private By settingsSavedMessageLocator = By.xpath("//div[@id='message']/p");
 
 
@@ -42,13 +40,9 @@ public class AdminProductsDownloadablePage extends HelperBase {
     }
 
     public AdminProductsDownloadablePage clickOnDownloadableProductsTab() {
-        click(downloadableProductsTabLocator);
+        click(downloadableProductsLocator);
         return this;
     }
-
-//    public boolean checkDownloadableProductsUrl() {
-//        return getPageUrl(expectedUrl);
-//    }
 
     public AdminProductsDownloadablePage selectFileDownloadMethod() {
         click(fileDownloadMethodLocator);
