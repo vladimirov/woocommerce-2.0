@@ -26,22 +26,18 @@ public class AdminSettingsGeneralPage extends HelperBase {
     private By locationInputLocator = By.xpath("//span[@class='select2-search select2-search--dropdown']/input");
     private By searchResultLocator = By.cssSelector("li.select2-results__option.select2-results__option--highlighted");
     private By sellToSpecificCountriesItemLocator = By.xpath("//span[contains(@class, 'select2-results')]/ul[1]/li[3]");
-
 //    private By chooseCountriesLocator = By.cssSelector("#mainform > table:nth-child(9) > tbody > tr:nth-child(3) > td > span > span.selection > span > ul > li > input");
     private By chooseCountriesInputLocator = By.cssSelector("input.select2-search__field");
     private By chooseCountriesULLocator = By.cssSelector("ul.select2-selection__rendered");
     private By chooseCountriesSpanLocator = By.cssSelector("span.select2.select2-container.select2-container--default.select2-container--below");
     private By chooseCountriesLocator = By.xpath("//td[@class='forminp']/select[1]/option[1]");
-
     private By allCountriesLocator = By.cssSelector("a.select_all button");
-
-
     private By specificSellingLocationItemLocator = By.xpath("//span[contains(@class, 'select2-results')]/ul[1]/li[1]");
     private By thousandSeparatorLocator = By.id("woocommerce_price_thousand_sep");
     private By decimalSeparatorLocator = By.id("woocommerce_price_decimal_sep");
     private By numberOfDecimalsLocator = By.id("woocommerce_price_num_decimals");
     private By productsTabLocator = By.xpath("//*[@id='mainform']/nav/a[2]");
-    private By downloadableProductsLocator = By.xpath("//*[@id='mainform']/ul/li[4]/a");
+    private By downloadableProductsLocator = By.linkText("Downloadable products");
     private By fileDownloadMethodLocator = By.id("select2-woocommerce_file_download_method-container");
     private By redirectOnlyItemLocator = By.xpath("//span[contains(@class, 'select2-results')]/ul[1]/li[3]");
     private By downloadsRequireLoginLocator = By.id("woocommerce_downloads_require_login");
