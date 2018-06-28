@@ -15,35 +15,29 @@ public class AdminTaxTest extends TestBase {
     }
 
     @Test(groups = {"admin"}, priority = 1)
-    public void openTaxOptions() {
+    public void setTaxOptions() {
         app.adminTaxPage().clickOnTaxTab();
+        app.adminTaxPage().selectNoInPricesEnteredWithTax();
+        app.adminTaxPage().selectCalculateTaxBasedOn();
+        app.adminTaxPage().selectShippingTaxClass();
+        app.adminTaxPage().uncheckRounding();
+        app.adminTaxPage().selectDisplayPricesInTheShop();
+        app.adminTaxPage().selectDisplayPricesDuringCartAndCheckout();
+        app.adminTaxPage().selectDisplayTaxTotals();
+        app.adminTaxPage().saveChanges();
 
-        assertTrue(app.adminTaxPage().checkTaxPageUrl());
+        assertTrue(app.adminTaxPage().successMessageIsDisplayed());
     }
 
-//    @Test(priority = 2, groups = {"admin"})
-//    public void setTaxOptions() {
-//        app.adminTaxPage().clickOnTaxTab();
-//        app.adminTaxPage().selectNoInPricesEnteredWithTax();
-//        app.adminTaxPage().selectCalculateTaxBasedOn();
-//        app.adminTaxPage().selectShippingTaxClass();
-//        app.adminTaxPage().uncheckRounding();
-//        app.adminTaxPage().selectDisplayPricesInTheShop();
-//        app.adminTaxPage().selectDisplayPricesDuringCartAndCheckout();
-//        app.adminTaxPage().selectDisplayTaxTotals();
-//        app.adminTaxPage().saveChanges();
-//
-//        assertTrue(app.adminTaxPage().successMessageIsDisplayed());
-//    }
-//
-//    @Test(priority = 3, groups = {"admin"})
-//    public void addTaxClasses() {
-//        app.adminTaxPage().clickOnTaxTab();
-//        app.adminTaxPage().removeAdditionalTaxClasses();
-//        app.adminTaxPage().addNewAdditionalTaxClass();
-//        app.adminTaxPage().saveChanges();
-//        assertTrue(app.adminTaxPage().newAdditionalTaxClassIsDisplayed());
-//    }
+    @Test(groups = {"admin"}, priority = 2)
+    public void addTaxClasses() {
+        app.adminTaxPage().clickOnTaxTab();
+        app.adminTaxPage().removeAdditionalTaxClasses();
+        app.adminTaxPage().addNewAdditionalTaxClass();
+        app.adminTaxPage().saveChanges();
+
+        assertTrue(app.adminTaxPage().newAdditionalTaxClassIsDisplayed());
+    }
 
 
 }

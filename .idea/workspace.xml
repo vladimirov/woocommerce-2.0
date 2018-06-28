@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e93593d7-bcbc-488e-b796-37145123ca3f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appmanager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AdminTax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AdminTaxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CouponCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AdminCouponCreationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DownloadableProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AdminDownloadableProductsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GeneralSettingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AdminGeneralSettingsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrderCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AdminOrderCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appmanager/AdminTaxPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appmanager/AdminTaxPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AdminTaxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AdminTaxTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,25 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminTaxPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminTaxPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminTaxPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state relative-caret-position="-554">
+              <caret line="39" selection-start-line="35" selection-end-line="43" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2696#2697#0" expanded="true" />
-                <element signature="e#2742#2743#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminTaxTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdminTaxTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AdminTaxTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="534">
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,7 +82,6 @@
         <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminCouponPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminProductPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminTaxPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/CartPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/ShopPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/ProductPage.java" />
@@ -117,6 +110,7 @@
         <option value="$PROJECT_DIR$/src/test/java/AdminOrderCreationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/NavigationHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/ApplicationManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminTaxPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/AdminTaxTest.java" />
       </list>
     </option>
@@ -537,22 +531,17 @@
       <option name="project" value="LOCAL" />
       <updated>1530190002479</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fixed new order test in admin">
+      <created>1530194012859</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1530194012859</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AdminProductsDownloadable - 2018.06.28 at 15h 18m 16s.xml">
-      <configuration name="AdminProductsDownloadable" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AdminProductsDownloadable - 2018.06.28 at 15h 26m 05s.xml">
-      <configuration name="AdminProductsDownloadable" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AdminProductsDownloadable - 2018.06.28 at 15h 27m 08s.xml">
-      <configuration name="AdminProductsDownloadable" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AdminProductsDownloadable - 2018.06.28 at 15h 29m 54s.xml">
-      <configuration name="AdminProductsDownloadable" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="AdminProductsDownloadable - 2018.06.28 at 15h 30m 50s.xml">
       <configuration name="AdminProductsDownloadable" configurationId="TestNG" />
     </history-entry>
@@ -571,6 +560,18 @@
     <history-entry file="AdminTaxTest - 2018.06.28 at 16h 08m 04s.xml">
       <configuration name="AdminTaxTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="AdminTaxTest - 2018.06.28 at 17h 04m 45s.xml">
+      <configuration name="AdminTaxTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdminTaxTest - 2018.06.28 at 17h 06m 15s.xml">
+      <configuration name="AdminTaxTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdminTaxTest - 2018.06.28 at 17h 06m 40s.xml">
+      <configuration name="AdminTaxTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdminTaxTest - 2018.06.28 at 17h 07m 11s.xml">
+      <configuration name="AdminTaxTest" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1066" extended-state="6" />
@@ -585,7 +586,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34689507" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3372591" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
@@ -615,7 +616,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -964,24 +965,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AdminTaxTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminTaxPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="-554">
+          <caret line="39" selection-start-line="35" selection-end-line="43" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminTaxPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/AdminTaxTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        <state relative-caret-position="534">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2696#2697#0" expanded="true" />
-            <element signature="e#2742#2743#0" expanded="true" />
           </folding>
         </state>
       </provider>

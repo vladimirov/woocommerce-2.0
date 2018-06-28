@@ -9,8 +9,6 @@ public class AdminTaxPage extends HelperBase {
         super(driver);
     }
 
-//    String expectedUrl = baseUrl + "/wp-admin/admin.php?page=wc-settings&tab=tax";
-    String expectedUrl = "need to check";
     String successMessage = "Your settings have been saved.";
     String additionalTax = "Fancy";
 
@@ -29,7 +27,7 @@ public class AdminTaxPage extends HelperBase {
     private By includingTaxItemLocator = By.xpath("//span[contains(@class, 'select2-results')]/ul[1]/li[1]");
     private By displayTaxTotalsLocator = By.id("select2-woocommerce_tax_total_display-container");
     private By singleTotalItemLocator = By.xpath("//span[contains(@class, 'select2-results')]/ul[1]/li[1]");
-    private By saveChangesButtonLocator = By.xpath(".//*[@id='mainform']/p/input[1]");
+    private By saveChangesButtonLocator = By.name("save");
     private By settingsSavedMessageLocator = By.xpath("//div[@id='message']/p");
     private By additionalTaxClassesLocator = By.id("woocommerce_tax_classes");
     private By newAdditionalTaxClassLocator = By.xpath("//a[contains(text(),'Fancy')]");
@@ -48,10 +46,6 @@ public class AdminTaxPage extends HelperBase {
     public AdminTaxPage clickOnTaxTab() {
         click(taxTabLocator);
         return this;
-    }
-
-    public boolean checkTaxPageUrl() {
-        return getPageUrl(expectedUrl);
     }
 
     public AdminTaxPage selectNoInPricesEnteredWithTax() {
