@@ -4,7 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 
-public class OrderCreationTest extends TestBase {
+public class AdminOrderCreationTest extends TestBase {
 
     @Test(groups = {"admin"})
     public void addNewOrder() {

@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertTrue;
 
 
-public class DownloadableProductsTest extends TestBase {
+public class AdminDownloadableProductsTest extends TestBase {
 
     @Test(groups = {"admin"})
     public void canUpdateSettings() {

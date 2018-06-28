@@ -87,7 +87,6 @@ public class ApplicationManager {
         driver.get(properties.getProperty("web.baseUrl"));
     }
 
-
     public void stop() {
         driver.quit();
     }

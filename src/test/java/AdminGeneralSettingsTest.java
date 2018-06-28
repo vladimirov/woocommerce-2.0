@@ -4,8 +4,9 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertTrue;
 
 
-public class GeneralSettingsTest extends TestBase {
+public class AdminGeneralSettingsTest extends TestBase {
 
+    //TODO Extract in one class
     @BeforeMethod
     public void gotoWoocommerceSettings() {
         app.loginToAdmin();
