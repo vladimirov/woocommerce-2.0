@@ -1,17 +1,13 @@
-package appmanager;
+package pages;
 
+import appmanager.HelperBase;
 import models.ProductData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.DataConverter;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.List;
-import java.util.Properties;
 
 
 public class CartPage extends HelperBase {
@@ -141,9 +137,9 @@ public class CartPage extends HelperBase {
         return textIsDisplayed("kr48.00", totalPriceLocator);
     }
 
-    public boolean qtyOfProductIsFive() {
-        return elementHasValue(productPage.newQty, qtyLocator);
-    }
+//    public boolean qtyOfProductIsFive() {
+//        return elementHasValue(productPage.newQty, qtyLocator);
+//    }
 
     public CartPage removeProductFromCart() {
         click(removeProductLocator);

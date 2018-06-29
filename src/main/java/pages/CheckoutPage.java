@@ -1,5 +1,6 @@
-package appmanager;
+package pages;
 
+import appmanager.HelperBase;
 import models.BuyerData;
 import models.ProductData;
 import org.openqa.selenium.By;
@@ -22,6 +23,8 @@ public class CheckoutPage extends HelperBase {
     private By lastNameLocator = By.id("billing_last_name");
     private By streetAddressLocator = By.id("billing_address_1");
     private By cityLocator = By.id("billing_city");
+    private By stateLocator = By.id("billing_state");
+
     private By postcodeLocator = By.id("billing_postcode");
     private By emailLocator = By.id("billing_email");
     private By phoneLocator = By.id("billing_phone");
@@ -53,6 +56,11 @@ public class CheckoutPage extends HelperBase {
         return this;
     }
 
+    public CheckoutPage enterState() {
+        type(stateLocator, buyer.getState());
+        return this;
+    }
+
     public CheckoutPage enterPostcode() {
         type(postcodeLocator, String.valueOf(buyer.getPost()));
         return this;
@@ -69,8 +77,11 @@ public class CheckoutPage extends HelperBase {
     }
 
     public CheckoutPage placeOrderButtonClick() {
-        scrollDownToFooter();
-        waitToBeStale(placeOrderButtonLocator);
+//        scrollDownToFooter();
+
+        scrollTillElementIsVisible(placeOrderButtonLocator);
+
+//        waitToBeStale(placeOrderButtonLocator);
         click(placeOrderButtonLocator);
         return this;
     }

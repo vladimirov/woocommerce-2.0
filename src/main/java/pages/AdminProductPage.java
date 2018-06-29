@@ -1,5 +1,6 @@
-package appmanager;
+package pages;
 
+import appmanager.HelperBase;
 import com.google.common.base.Function;
 import models.ProductData;
 import org.openqa.selenium.By;

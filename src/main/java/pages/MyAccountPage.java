@@ -1,5 +1,6 @@
-package appmanager;
+package pages;
 
+import appmanager.HelperBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

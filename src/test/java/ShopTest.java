@@ -7,8 +7,8 @@ public class ShopTest extends TestBase{
 
 //    @Test(priority = 1)
 //    public void addProductToCart() {
-//        app.cartPage().openEmptyCartPage();
-//        cartPage.returnToShopButtonClick();
+//        app.openCartPage();
+//        app.cartPage().returnToShopButtonClick();
 //        shopPage.addToCartButtonClick();
 //        shopPage.viewCartButtonClick();
 //        assertTrue(cartPage.removeButtonIsDisplayed());

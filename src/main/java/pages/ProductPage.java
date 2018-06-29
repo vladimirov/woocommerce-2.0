@@ -1,12 +1,10 @@
-package appmanager;
+package pages;
 
+import appmanager.HelperBase;
 import models.ProductData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.DataConverter;
-
-import java.util.HashSet;
-import java.util.Set;
 
 public class ProductPage extends HelperBase {
 
@@ -18,12 +16,11 @@ public class ProductPage extends HelperBase {
 
     private By productTitleLocator = By.cssSelector("h1.product_title.entry-title");
     private By productPriceLocator = By.cssSelector("p.price");
-    private By productAddToCartButtonLocator = By.xpath("//button[contains(@type, 'submit')]");
+    private By productAddToCartButtonLocator = By.name("add-to-cart");
     private By qtyLocator = By.cssSelector("input.input-text.qty.text");
 
 
 //    private ProductData productData = null;
-
 //    Set<ProductData> pData = new HashSet<>();
 
     public ProductData productInfoOnProductPage() {

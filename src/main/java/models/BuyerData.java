@@ -8,7 +8,8 @@ public class BuyerData {
     private String email;
     private String address = "Test Address";
     private String city = "TestCity";
-//    private String post = String.valueOf(System.currentTimeMillis());
+    private String state = "TestState";
+    //    private String post = String.valueOf(System.currentTimeMillis());
     private int post = gen();
     private long phone = System.currentTimeMillis();
 
@@ -36,6 +37,10 @@ public class BuyerData {
 
     public String getCity() {
         return city;
+    }
+
+    public String getState() {
+        return state;
     }
 
     public int getPost() {
