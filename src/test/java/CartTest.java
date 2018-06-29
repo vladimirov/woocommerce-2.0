@@ -16,7 +16,7 @@ public class CartTest extends TestBase {
         //should adds the product to the cart when "Add to cart" is clicked
         app.shopPage().openShopPage();
         app.shopPage().openRandomProduct();
-        productInfo = app.productPage().getOpenedProductInfo();
+//        productInfo = app.productPage().getOpenedProductInfo();
         app.shopPage().addProductToCart();
         app.openCartPage();
         app.cartPage().validateProductDataInCart();

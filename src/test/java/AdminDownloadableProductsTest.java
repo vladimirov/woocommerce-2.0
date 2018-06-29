@@ -7,7 +7,7 @@ public class AdminDownloadableProductsTest extends TestBase {
 
     @Test(groups = {"admin"})
     public void canUpdateSettings() {
-        app.openAdminUrl();
+        app.loginToAdmin();
         app.adminProductsDownloadablePage().clickOnWooCommerceMenu();
         app.adminProductsDownloadablePage().clickOnSettingsMenu();
         app.adminProductsDownloadablePage().clickOnProductsTab();

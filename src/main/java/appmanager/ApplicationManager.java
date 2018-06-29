@@ -77,7 +77,7 @@ public class ApplicationManager {
         shopPage = new ShopPage(driver);
     }
 
-    public void openAdminUrl() {
+    public void loginToAdmin() {
         driver.get(properties.getProperty("web.adminUrl"));
         sessionHelper = new SessionHelper(driver);
         sessionHelper.loginToAdmin(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
