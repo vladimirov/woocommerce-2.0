@@ -78,10 +78,8 @@ public class CheckoutPage extends HelperBase {
 
     public CheckoutPage placeOrderButtonClick() {
 //        scrollDownToFooter();
-
         scrollTillElementIsVisible(placeOrderButtonLocator);
-
-//        waitToBeStale(placeOrderButtonLocator);
+        waitToBeStale(placeOrderButtonLocator);
         click(placeOrderButtonLocator);
         return this;
     }

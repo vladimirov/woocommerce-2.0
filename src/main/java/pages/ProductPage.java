@@ -15,7 +15,9 @@ public class ProductPage extends HelperBase {
     }
 
     private By productTitleLocator = By.cssSelector("h1.product_title.entry-title");
-    private By productPriceLocator = By.cssSelector("p.price");
+//    private By productPriceLocator = By.cssSelector("p.price");
+    private By productPriceLocator = By.xpath("//p[@class='price']/ins/span");
+    private By productOnSalePriceLocator = By.xpath("//p[@class='price']/span");
     private By productAddToCartButtonLocator = By.name("add-to-cart");
     private By qtyLocator = By.cssSelector("input.input-text.qty.text");
 
@@ -25,10 +27,14 @@ public class ProductPage extends HelperBase {
 
     public ProductData productInfoOnProductPage() {
         waitToBePresent(productTitleLocator);
-        waitToBePresent(productPriceLocator);
         String name = driver.findElement(productTitleLocator).getText();
-        float price = DataConverter.parsePriceValue(driver.findElement(productPriceLocator).getText());
-        return new ProductData(name, price);
+        try {
+            float price = DataConverter.parsePriceValue(driver.findElement(productPriceLocator).getText());
+            return new ProductData(name, price);
+        } catch (Exception ex) {
+            float price = DataConverter.parsePriceValue(driver.findElement(productOnSalePriceLocator).getText());
+            return new ProductData(name, price);
+        }
     }
 
     public ProductPage addProductToCart() {
