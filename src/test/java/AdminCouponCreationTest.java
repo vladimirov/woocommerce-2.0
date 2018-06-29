@@ -13,9 +13,9 @@ public class AdminCouponCreationTest extends TestBase {
         app.adminCouponPage().clickOnCouponsMenu();
         app.adminCouponPage().clickOnAddCouponButton();
         app.adminCouponPage().clickOnGeneralTab();
-        app.adminCouponPage().clickOnExpireDateField().insertExpireDate();
         app.adminCouponPage().insertCouponAmount();
         app.adminCouponPage().clickOnDiscountTypeDropdownLocator();
+        app.adminCouponPage().clickOnExpireDateField().insertExpireDate();
         app.adminCouponPage().chooseFixedCartOption();
         app.adminCouponPage().insertCouponCode();
         app.adminCouponPage().insertDescription();
