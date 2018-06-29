@@ -88,6 +88,10 @@ public class ApplicationManager {
         driver.get(properties.getProperty("web.baseUrl"));
     }
 
+    public void openAdminUrl() {
+        driver.get(properties.getProperty("web.adminUrl"));
+    }
+
     public void openCartPage() {
         driver.get(properties.getProperty("web.baseUrl") + "cart");
     }

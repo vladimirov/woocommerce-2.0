@@ -1,10 +1,12 @@
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
 
-public class ProductCreationTest extends TestBase{
+public class ProductCreationTest extends TestBase {
 
     @Test(groups = {"admin"})
     public void addNewProduct() {
@@ -28,5 +30,15 @@ public class ProductCreationTest extends TestBase{
         app.adminProductPage().findNewProductOnSite();
         assertEquals(app.adminProductPage().name, app.productPage().actualProductName());
         assertEquals(app.adminProductPage().price, app.productPage().actualProductPrice());
+    }
+
+    @AfterMethod
+    public void deleteTestProduct(){
+        app.openAdminUrl();
+        app.adminProductPage().clickOnProductsMenu();
+        app.adminProductPage().clickOnAllProductsDropdown();
+        app.adminProductPage().moveToTrashTestProduct();
+
+        assertTrue(app.adminProductPage().noProductsFoundTextIsDisplayed());
     }
 }

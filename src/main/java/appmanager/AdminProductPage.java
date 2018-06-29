@@ -56,6 +56,7 @@ public class AdminProductPage extends HelperBase {
     private By trashButtonLocator = By.xpath("//span[@class='trash']");
     private By productDeletedMessageLocator = By.id("message");
     private By productNameInCartLocator = By.xpath("//*[@class='product-name']/a");
+    private By noProductsFoundMessageLocator = By.cssSelector("td.colspanchange");
     //Variable product
     private By productTypeLocator = By.id("product-type");
     private By variableProductLocator = By.xpath("//select[@id='product-type']/optgroup/option[4]");
@@ -180,11 +181,7 @@ public class AdminProductPage extends HelperBase {
         return this;
     }
 
-
-
     public AdminProductPage moveToTrashTestProduct() {
-//        driver.navigate().to(baseAdminUrl);
-        click(productsMenuLocator);
         type(postSearchInputLocator, name);
         click(searchProductsButtonLocator);
         hoverOnElement(productNameInAdminLocator);
@@ -197,5 +194,11 @@ public class AdminProductPage extends HelperBase {
     public boolean newSimpleProductIsDisplayedInCart() {
         return textIsDisplayed(name, productNameInCartLocator);
     }
+
+    public boolean noProductsFoundTextIsDisplayed(){
+        return textIsDisplayed("No products found", noProductsFoundMessageLocator);
+    }
+
+
 
 }
