@@ -1,14 +1,16 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.*;
+
 
 public class ProductCreationTest extends TestBase{
 
     @Test(groups = {"admin"})
     public void addNewProduct() {
         app.loginToAdmin();
-
         app.adminProductPage().clickOnProductsMenu();
+        app.adminProductPage().clickOnAllProductsDropdown();
         app.adminProductPage().clickOnAddNewProductButton();
         app.adminProductPage().insertProductName();
         app.adminProductPage().insertProductDescription();
@@ -17,10 +19,14 @@ public class ProductCreationTest extends TestBase{
         app.adminProductPage().clickOnInventoryTab();
         app.adminProductPage().insertProductShortDescription();
         app.adminProductPage().clickOnPublishButton();
-        app.adminProductPage().goToBasePage();
+        //assert that product is in admin
+        app.adminProductPage().clickOnAllProductsDropdown();
+        app.adminProductPage().findNewProductInAdmin();
+        assertEquals(app.adminProductPage().name, app.adminProductPage().actualProductNameInAdmin());
+        //assert that product is on site
+        app.openBaseUrl();
         app.adminProductPage().findNewProductOnSite();
-
-        Assert.assertEquals(app.adminProductPage().name, app.productPage().actualProductName());
-        Assert.assertEquals(app.adminProductPage().price, app.productPage().actualProductPrice());
+        assertEquals(app.adminProductPage().name, app.productPage().actualProductName());
+        assertEquals(app.adminProductPage().price, app.productPage().actualProductPrice());
     }
 }

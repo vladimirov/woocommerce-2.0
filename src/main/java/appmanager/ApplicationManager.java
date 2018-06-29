@@ -24,7 +24,7 @@ public class ApplicationManager {
     private AdminOrderPage adminOrderPage;
     private AdminProductPage adminProductPage;
     private AdminProductsDownloadablePage adminProductsDownloadablePage;
-    private AdminSettingsGeneralPage adminSettingsGeneralPage;
+    private AdminGeneralSettingsPage adminGeneralSettingsPage;
     private AdminTaxPage adminTaxPage;
     private CartPage cartPage;
     private CheckoutPage checkoutPage;
@@ -68,7 +68,7 @@ public class ApplicationManager {
         adminOrderPage = new AdminOrderPage(driver);
         adminProductPage = new AdminProductPage(driver);
         adminProductsDownloadablePage = new AdminProductsDownloadablePage(driver);
-        adminSettingsGeneralPage = new AdminSettingsGeneralPage(driver);
+        adminGeneralSettingsPage = new AdminGeneralSettingsPage(driver);
         adminTaxPage = new AdminTaxPage(driver);
         cartPage = new CartPage(driver);
         checkoutPage = new CheckoutPage(driver);
@@ -122,8 +122,8 @@ public class ApplicationManager {
         return adminProductsDownloadablePage;
     }
 
-    public AdminSettingsGeneralPage adminSettingsGeneralPage() {
-        return adminSettingsGeneralPage;
+    public AdminGeneralSettingsPage adminSettingsGeneralPage() {
+        return adminGeneralSettingsPage;
     }
 
     public AdminTaxPage adminTaxPage() {

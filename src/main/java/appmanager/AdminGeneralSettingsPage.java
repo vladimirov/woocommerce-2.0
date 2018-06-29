@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class AdminSettingsGeneralPage extends HelperBase {
+public class AdminGeneralSettingsPage extends HelperBase {
 
-    public AdminSettingsGeneralPage(WebDriver driver) {
+    public AdminGeneralSettingsPage(WebDriver driver) {
         super(driver);
     }
 
@@ -46,12 +46,12 @@ public class AdminSettingsGeneralPage extends HelperBase {
     private By forceDownloadsItemLocator = By.xpath("//span[contains(@class, 'select2-results')]/ul[1]/li[1]");
 
 
-    public AdminSettingsGeneralPage clickOnWooCommerceMenu() {
+    public AdminGeneralSettingsPage clickOnWooCommerceMenu() {
         click(wooCommerceMenuLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage clickOnSettingsMenu() {
+    public AdminGeneralSettingsPage clickOnSettingsMenu() {
         click(settingsMenuLocator);
         return this;
     }
@@ -60,17 +60,17 @@ public class AdminSettingsGeneralPage extends HelperBase {
         return elementHasClass(active, generalTabLocator);
     }
 
-    public AdminSettingsGeneralPage clickOnSellingLocationDropdown() {
+    public AdminGeneralSettingsPage clickOnSellingLocationDropdown() {
         click(sellingLocationLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage clickOnSetToAllCountriesItem() {
+    public AdminGeneralSettingsPage clickOnSetToAllCountriesItem() {
         click(setToAllCountriesLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage saveChanges() {
+    public AdminGeneralSettingsPage saveChanges() {
         scrollDownToFooter();
         click(saveChangesButtonLocator);
         return this;
@@ -81,91 +81,91 @@ public class AdminSettingsGeneralPage extends HelperBase {
     }
 
 
-    public AdminSettingsGeneralPage clickOnBaseLocationDropdown() {
+    public AdminGeneralSettingsPage clickOnBaseLocationDropdown() {
         click(locationDropdownLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage setBaseLocation() {
+    public AdminGeneralSettingsPage setBaseLocation() {
         click(locationInputLocator);
         type(locationInputLocator, baseLocation);
         click(searchResultLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage chooseSellToSpecificCountriesItem() {
+    public AdminGeneralSettingsPage chooseSellToSpecificCountriesItem() {
         click(sellToSpecificCountriesItemLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage clickOnChooseCountriesInputField() {
+    public AdminGeneralSettingsPage clickOnChooseCountriesInputField() {
 //        click(chooseCountriesLocator);
         click(allCountriesLocator);
 //        type(chooseCountriesLocator, sellingLocation);
         return this;
     }
 
-    public AdminSettingsGeneralPage chooseFromSpecificCountriesSuggestions() {
+    public AdminGeneralSettingsPage chooseFromSpecificCountriesSuggestions() {
         click(specificSellingLocationItemLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage setThousandSeparator() {
+    public AdminGeneralSettingsPage setThousandSeparator() {
         clear(thousandSeparatorLocator);
         type(thousandSeparatorLocator, ",");
         return this;
     }
 
-    public AdminSettingsGeneralPage setDecimalSeparator() {
+    public AdminGeneralSettingsPage setDecimalSeparator() {
         clear(decimalSeparatorLocator);
         type(decimalSeparatorLocator, ".");
         return this;
     }
 
-    public AdminSettingsGeneralPage setNumberOfDecimals() {
+    public AdminGeneralSettingsPage setNumberOfDecimals() {
         clear(numberOfDecimalsLocator);
         type(numberOfDecimalsLocator, "2");
         return this;
     }
 
     //downloadableProducts
-    public AdminSettingsGeneralPage clickOnProductsTab() {
+    public AdminGeneralSettingsPage clickOnProductsTab() {
         click(productsTabLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage clickOnDownloadableProducts() {
+    public AdminGeneralSettingsPage clickOnDownloadableProducts() {
         click(downloadableProductsLocator);
         return this;
     }
 
 
-    public AdminSettingsGeneralPage clickOnFileDownloadableMethodDropdown() {
+    public AdminGeneralSettingsPage clickOnFileDownloadableMethodDropdown() {
         click(fileDownloadMethodLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage chooseRedirectOnlyItem() {
+    public AdminGeneralSettingsPage chooseRedirectOnlyItem() {
         click(redirectOnlyItemLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage clickOnDownloadsRequireLoginCheckbox() {
+    public AdminGeneralSettingsPage clickOnDownloadsRequireLoginCheckbox() {
         click(downloadsRequireLoginLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage clickOnGrantAccessCheckbox() {
+    public AdminGeneralSettingsPage clickOnGrantAccessCheckbox() {
         click(grantAccessLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage clickOnSaveChangesInProducts() {
+    public AdminGeneralSettingsPage clickOnSaveChangesInProducts() {
         click(saveChangesInProductsLocator);
         return this;
     }
 
-    public AdminSettingsGeneralPage chooseForceDownloadsItem() {
+    public AdminGeneralSettingsPage chooseForceDownloadsItem() {
         click(forceDownloadsItemLocator);
         return this;
     }

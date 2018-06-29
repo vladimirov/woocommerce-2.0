@@ -34,7 +34,7 @@ public class DataConverter {
      * @return Parsed float value of the price.
      */
     public static float parsePriceValue(String label) {
-//        Matcher priceMatcher = Pattern.compile("^(.*) $").matcher(label);
+//        Matcher priceMatcher = Pattern.compile("^(.*) ₴$").matcher(label);
 //        Assert.assertTrue(priceMatcher.find(), "Unable to extract price value!");
 //
 //        try {
@@ -45,7 +45,6 @@ public class DataConverter {
 //            throw  new RuntimeException(e);
 //        }
         return Float.parseFloat(label.replaceAll("[^\\d.]", ""));
-
     }
 
     /**

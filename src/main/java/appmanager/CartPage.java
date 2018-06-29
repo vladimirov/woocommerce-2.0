@@ -47,12 +47,11 @@ public class CartPage extends HelperBase {
     private By proceedToCheckoutButton = By.cssSelector("a.checkout-button.button.alt.wc-forward");
 
 
-    public ProductData validateProductDataInCart() {
+    public ProductData productInfoInCart() {
         waitToBePresent(productNameInCartLocator);
         waitToBePresent(productPriceLocator);
         String name = driver.findElement(productNameInCartLocator).getText();
         float price = DataConverter.parsePriceValue(driver.findElement(productPriceLocator).getText());
-
         return new ProductData(name, price);
     }
 

@@ -7,11 +7,11 @@ public class PlaceOrderTest extends TestBase{
     public void placeOrderTest() throws InterruptedException {
 //        app.shopPage().openShopPage();
 //        app.shopPage().openRandomProduct();
-//        app.productPage().getOpenedProductInfo();
-//        product = app.productPage().getOpenedProductInfo();
+//        app.productPage().openedProductInfo();
+//        product = app.productPage().openedProductInfo();
 //        app.productPage().addProductToCart();
 //        app.cartPage().openCartPage();
-//        productInCart = app.cartPage().validateProductDataInCart();
+//        productInCart = app.cartPage().productInfoInCart();
 //
 //        //Validate quantity of items in cart, name and price of the product
 //        Assert.assertTrue(app.cartPage().validateNumberOfItemsInCart());

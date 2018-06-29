@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.DataConverter;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ProductPage extends HelperBase {
 
     String newQty = "5";
@@ -19,7 +22,11 @@ public class ProductPage extends HelperBase {
     private By qtyLocator = By.cssSelector("input.input-text.qty.text");
 
 
-    public ProductData getOpenedProductInfo() {
+//    private ProductData productData = null;
+
+//    Set<ProductData> pData = new HashSet<>();
+
+    public ProductData productInfoOnProductPage() {
         waitToBePresent(productTitleLocator);
         waitToBePresent(productPriceLocator);
         String name = driver.findElement(productTitleLocator).getText();

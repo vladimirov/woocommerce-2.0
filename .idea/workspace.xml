@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e93593d7-bcbc-488e-b796-37145123ca3f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AdminCouponCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AdminCouponCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appmanager/AdminProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appmanager/AdminProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appmanager/AdminSettingsGeneralPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appmanager/AdminGeneralSettingsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appmanager/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appmanager/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appmanager/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appmanager/ProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/ProductData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ProductData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlaceOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaceOrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProductCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductCreationTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,30 +28,8 @@
       <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/ApplicationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="109" selection-start-line="109" selection-end-line="109" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3947#3948#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelperBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/HelperBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminCouponCreationTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/AdminCouponCreationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="934">
+              <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,16 +37,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminCouponPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminCouponPage.java">
+      <file leaf-file-name="AdminGeneralSettingsPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminGeneralSettingsPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+            <state relative-caret-position="102">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3073#3074#0" expanded="true" />
-                <element signature="e#3156#3157#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminGeneralSettingsTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/AdminGeneralSettingsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="54" selection-start-line="12" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminProductPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminProductPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7154#7155#0" expanded="true" />
+                <element signature="e#7226#7227#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductCreationTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ProductCreationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -92,8 +112,6 @@
         <option value="$PROJECT_DIR$/src/main/java/appmanager/SiteHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminCouponPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminProductPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/appmanager/ProductPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/MyAccountPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/HomePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/CheckoutPage.java" />
@@ -107,7 +125,6 @@
         <option value="$PROJECT_DIR$/src/test/java/SingleProductTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminOrderPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/AdminOrderNew.java" />
-        <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminSettingsGeneralPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminProductsDownloadablePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/AdminProductsDownloadable.java" />
         <option value="$PROJECT_DIR$/src/test/java/DownloadableProductsTest.java" />
@@ -118,12 +135,19 @@
         <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminTaxPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/AdminTaxTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/HelperBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/appmanager/CartPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/NavigationHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/ShopPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CartTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/appmanager/ApplicationManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/AdminCouponCreationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/ProductData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/appmanager/ProductPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/appmanager/CartPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/DataConverter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CartTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminSettingsGeneralPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminGeneralSettingsPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/appmanager/AdminProductPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ProductCreationTest.java" />
       </list>
     </option>
   </component>
@@ -202,6 +226,14 @@
               <item name="woocommerce-2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="woocommerce-2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="woocommerce-2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -260,7 +292,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.AdminCouponCreationTest">
+  <component name="RunManager" selected="TestNG.ProductCreationTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -287,52 +319,6 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AdminCouponCreationTest" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="AdminDownloadableProductsTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Woocommerce" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AdminDownloadableProductsTest" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="AdminGeneralSettingsTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Woocommerce" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AdminGeneralSettingsTest" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -395,6 +381,52 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="CartTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Woocommerce" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CartTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="ProductCreationTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Woocommerce" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProductCreationTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -418,19 +450,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="TestNG.AdminDownloadableProductsTest" />
       <item itemvalue="TestNG.AdminCouponCreationTest" />
-      <item itemvalue="TestNG.AdminGeneralSettingsTest" />
       <item itemvalue="TestNG.AdminOrderCreationTest" />
       <item itemvalue="TestNG.AdminTaxTest" />
+      <item itemvalue="TestNG.CartTest" />
+      <item itemvalue="TestNG.ProductCreationTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ProductCreationTest" />
+        <item itemvalue="TestNG.CartTest" />
         <item itemvalue="TestNG.AdminCouponCreationTest" />
         <item itemvalue="TestNG.AdminTaxTest" />
         <item itemvalue="TestNG.AdminOrderCreationTest" />
-        <item itemvalue="TestNG.AdminGeneralSettingsTest" />
-        <item itemvalue="TestNG.AdminDownloadableProductsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -571,39 +603,46 @@
       <option name="project" value="LOCAL" />
       <updated>1530262970412</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="admin tax test refactored">
+      <created>1530267203591</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1530267203591</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AdminCouponCreationTest - 2018.06.29 at 12h 54m 20s.xml">
-      <configuration name="AdminCouponCreationTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 05m 01s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AdminCouponCreationTest - 2018.06.29 at 12h 58m 36s.xml">
-      <configuration name="AdminCouponCreationTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 19m 26s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AdminDownloadableProductsTest - 2018.06.29 at 12h 59m 23s.xml">
-      <configuration name="AdminDownloadableProductsTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 21m 37s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AdminGeneralSettingsTest - 2018.06.29 at 13h 00m 22s.xml">
-      <configuration name="AdminGeneralSettingsTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 22m 34s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AdminOrderCreationTest - 2018.06.29 at 13h 00m 49s.xml">
-      <configuration name="AdminOrderCreationTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 22m 50s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AdminTaxTest - 2018.06.29 at 13h 01m 19s.xml">
-      <configuration name="AdminTaxTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 23m 20s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AdminCouponCreationTest - 2018.06.29 at 13h 01m 55s.xml">
-      <configuration name="AdminCouponCreationTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 28m 51s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AdminCouponCreationTest - 2018.06.29 at 13h 02m 39s.xml">
-      <configuration name="AdminCouponCreationTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 30m 39s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AdminCouponCreationTest - 2018.06.29 at 13h 08m 09s.xml">
-      <configuration name="AdminCouponCreationTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 32m 10s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AdminCouponCreationTest - 2018.06.29 at 13h 12m 20s.xml">
-      <configuration name="AdminCouponCreationTest" configurationId="TestNG" />
+    <history-entry file="ProductCreationTest - 2018.06.29 at 18h 34m 40s.xml">
+      <configuration name="ProductCreationTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -619,23 +658,23 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.59967846" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32980332" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2652733" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30385852" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19515885" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329582" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.59967846" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" visible="true" weight="0.17041801" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329582" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -652,31 +691,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/CartTest.java</url>
-          <line>19</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ProductCreationTest.java</url>
+          <line>22</line>
           <properties />
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="26" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Listener.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Login.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/BaseTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/ui/admin/AdminCouponNew.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/ProductData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -700,16 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminProductPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,16 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminSettingsGeneralPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminTaxPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-494">
@@ -804,16 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AdminGeneralSettingsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-end-line="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -840,20 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ProductCreationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PlaceOrderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/Properties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -873,20 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/CartPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#2992#2993#0" expanded="true" />
-            <element signature="e#3067#3068#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/ShopPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -895,23 +867,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#743#744#0" expanded="true" />
             <element signature="e#781#782#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/ProductPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CartTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -975,17 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/ApplicationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3947#3948#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0.jar!/org/openqa/selenium/By.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -1036,13 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/HelperBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminCouponPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -1057,11 +994,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AdminCouponCreationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="272">
           <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/regex/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="621" column="19" selection-start-line="621" selection-start-column="19" selection-end-line="621" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/DataConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CartTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/CartPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
+            <element signature="e#3067#3068#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/ProductData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/ProductPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="41" selection-start-line="41" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PlaceOrderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/HelperBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/ApplicationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="934">
+          <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminGeneralSettingsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AdminGeneralSettingsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="54" selection-start-line="12" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appmanager/AdminProductPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7154#7155#0" expanded="true" />
+            <element signature="e#7226#7227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ProductCreationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
         </state>
       </provider>
     </entry>

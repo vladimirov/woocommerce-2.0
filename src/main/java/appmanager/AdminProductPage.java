@@ -30,6 +30,10 @@ public class AdminProductPage extends HelperBase {
     private String secondTestAttribute = "L";
 
     private By productsMenuLocator = By.id("menu-posts-product");
+    private By allProductsDropdownLocator = By.xpath("//li[@id='menu-posts-product']/ul/li[2]");
+
+    private By productSearchInAdminLocator = By.id("post-search-input");
+    private By productSearchInAdminButtonLocator = By.id("search-submit");
     private By attributesMenuLocator = By.xpath("//a[@href='edit.php?post_type=product&page=product_attributes']");
     private By addAttributeButtonLocator = By.name("add_new_attribute");
     private By testAttributeLocator = By.xpath("//a[contains(text(),'Size')]");
@@ -86,11 +90,8 @@ public class AdminProductPage extends HelperBase {
 
     public AdminProductPage setVariations() {
 //        waitToBePresentAndClick(By.xpath("//a[@href='#general_product_data']"));
-
-
 //        waitToBePresentAndClick(By.id("new-tag-product_tag"));
 //        waitToBeStale(variationsTabLocator);
-
         // Waiting 30 seconds for an element to be present on the page, checking
         // for its presence once every 5 seconds.
 
@@ -110,6 +111,11 @@ public class AdminProductPage extends HelperBase {
 
     public AdminProductPage clickOnProductsMenu() {
         click(productsMenuLocator);
+        return this;
+    }
+
+    public AdminProductPage clickOnAllProductsDropdown() {
+        click(allProductsDropdownLocator);
         return this;
     }
 
@@ -158,9 +164,14 @@ public class AdminProductPage extends HelperBase {
         return this;
     }
 
-    public AdminProductPage goToBasePage() {
-//        driver.navigate().to(baseUrl);
+    public AdminProductPage findNewProductInAdmin() {
+        type(productSearchInAdminLocator, name);
+        submit(productSearchInAdminButtonLocator);
         return this;
+    }
+
+    public String actualProductNameInAdmin() {
+        return driver.findElement(productNameInAdminLocator).getText();
     }
 
     public AdminProductPage findNewProductOnSite() {
@@ -168,6 +179,8 @@ public class AdminProductPage extends HelperBase {
         submit(searchProductsInputLocator);
         return this;
     }
+
+
 
     public AdminProductPage moveToTrashTestProduct() {
 //        driver.navigate().to(baseAdminUrl);

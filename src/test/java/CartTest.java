@@ -1,26 +1,24 @@
+import models.ProductData;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class CartTest extends TestBase {
 
-    @Test
+    @Test(enabled = false)
     public void cartPage() {
-        //should displays no item in the cart
         app.openCartPage();
         assertTrue(app.cartPage().emptyCartTextIsDisplayed());
 
-        //should adds the product to the cart when "Add to cart" is clicked
         app.shopPage().openShopPage();
         app.shopPage().openRandomProduct();
-//        productInfo = app.productPage().getOpenedProductInfo();
+        ProductData nameAndPriceOnProductPage =  app.productPage().productInfoOnProductPage();
         app.shopPage().addProductToCart();
         app.openCartPage();
-        app.cartPage().validateProductDataInCart();
+        ProductData nameAndPriceInCart = app.cartPage().productInfoInCart();
 
+        assertEquals(nameAndPriceOnProductPage, nameAndPriceInCart);
 
 //        app.shopPage().openSecondProductPageAndAddToCart();
 //        app.goTo().gotoCartPage();
