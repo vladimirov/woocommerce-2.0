@@ -15,12 +15,10 @@ public class ProductPage extends HelperBase {
     }
 
     private By productTitleLocator = By.cssSelector("h1.product_title.entry-title");
-//    private By productPriceLocator = By.cssSelector("p.price");
     private By productPriceLocator = By.xpath("//p[@class='price']/ins/span");
     private By productOnSalePriceLocator = By.xpath("//p[@class='price']/span");
     private By productAddToCartButtonLocator = By.name("add-to-cart");
     private By qtyLocator = By.cssSelector("input.input-text.qty.text");
-
 
 //    private ProductData productData = null;
 //    Set<ProductData> pData = new HashSet<>();
@@ -38,8 +36,16 @@ public class ProductPage extends HelperBase {
     }
 
     public ProductPage addProductToCart() {
-        click(productAddToCartButtonLocator);
-        return this;
+
+        try{
+            click(productAddToCartButtonLocator);
+            return this;
+        } catch (Exception ex) {
+
+        }
+
+//        click(productAddToCartButtonLocator);
+//        return this;
     }
 
     public String actualProductName() {
