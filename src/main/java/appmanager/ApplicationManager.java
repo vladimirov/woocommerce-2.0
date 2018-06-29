@@ -44,13 +44,13 @@ public class ApplicationManager {
 //        dbHelper = new DbHelper();
         switch (browser) {
             case BrowserType.CHROME: {
-                System.setProperty("webdriver.chrome.driver", "C:\\Projects\\Woocommerce\\src\\main\\resources\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "C:\\Windows\\chromedriver.exe");
                 DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-                driver = new ChromeDriver(capabilities);
+                this.driver = new ChromeDriver(capabilities);
                 break;
             }
             case BrowserType.FIREFOX: {
-                System.setProperty("webdriver.firefox.driver", "C:\\Projects\\Woocommerce\\src\\main\\resources\\geckodriver.exe");
+                System.setProperty("webdriver.chrome.driver", "C:\\Windows\\geckodriver.exe");
                 DesiredCapabilities capabilities = DesiredCapabilities.firefox();
                 driver = new FirefoxDriver(capabilities);
                 break;
@@ -60,6 +60,7 @@ public class ApplicationManager {
                 break;
         }
         driver.manage().window().maximize();
+        this.driver.manage().deleteAllCookies();
 
         siteHelper = new SiteHelper(driver);
         adminHelper = new AdminHelper(driver);
