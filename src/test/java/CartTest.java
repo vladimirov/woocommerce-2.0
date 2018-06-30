@@ -6,7 +6,7 @@ import static org.testng.Assert.assertTrue;
 
 public class CartTest extends TestBase {
 
-    @Test(enabled = true)
+    @Test(groups = {"end2end"})
     public void cartPage() {
         app.openCartPage();
 
@@ -14,7 +14,7 @@ public class CartTest extends TestBase {
 
         app.shopPage().openShopPage();
         app.shopPage().openRandomProduct();
-        ProductData product =  app.productPage().productInfoOnProductPage();
+        ProductData product = app.productPage().productInfoOnProductPage();
         app.shopPage().addProductToCart();
         app.openCartPage();
         ProductData productInCart = app.cartPage().productInfoInCart();
@@ -52,7 +52,6 @@ public class CartTest extends TestBase {
         app.openCartPage();
         app.cartPage().removeProductFromCart();
         assertTrue(app.cartPage().emptyCartTextIsDisplayed());
-
 
 
     }

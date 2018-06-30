@@ -8,7 +8,7 @@ import static org.testng.Assert.*;
 
 public class ProductCreationTest extends TestBase {
 
-    @Test(groups = {"admin"})
+    @Test(groups = {"end2end"})
     public void addNewProduct() {
         app.loginToAdmin();
         app.adminProductPage().clickOnProductsMenu();

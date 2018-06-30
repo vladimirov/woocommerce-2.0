@@ -5,7 +5,7 @@ import static org.testng.Assert.*;
 
 public class PlaceOrderTest extends TestBase{
 
-    @Test
+    @Test(groups = {"end2end"})
     public void placeOrderTest() {
         app.openBaseUrl();
         app.shopPage().openShopPage();
