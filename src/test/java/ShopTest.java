@@ -5,15 +5,17 @@ import static org.testng.Assert.*;
 
 public class ShopTest extends TestBase{
 
-//    @Test(priority = 1)
-//    public void addProductToCart() {
-//        app.openCartPage();
-//        app.cartPage().returnToShopButtonClick();
-//        shopPage.addToCartButtonClick();
-//        shopPage.viewCartButtonClick();
-//        assertTrue(cartPage.removeButtonIsDisplayed());
-//        cartPage.removeFromCartButtonClick();
-//    }
+    @Test(priority = 1)
+    public void addProductToCart() {
+        app.openCartPage();
+        assertTrue(app.cartPage().emptyCartTextIsDisplayed());
+
+        app.cartPage().clickOnReturnToShopButton();
+        app.shopPage().addToCartButtonClick();
+        shopPage.viewCartButtonClick();
+        assertTrue(cartPage.removeButtonIsDisplayed());
+        cartPage.removeFromCartButtonClick();
+    }
 //
 //    @Test (priority = 2)
 //    public void removeProductFromCart() {

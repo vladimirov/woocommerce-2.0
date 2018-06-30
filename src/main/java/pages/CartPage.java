@@ -18,6 +18,7 @@ public class CartPage extends HelperBase {
 
     private float totalPriceBefore;
 
+    private By returnToShopLocator = By.cssSelector("a.button.wc-backward");
     private By productNameInCartLocator = By.xpath("//*[@class='product-name']/a");
     private By productPriceLocator = By.xpath("//td[@class='product-subtotal']/span");
     private By cartItemsList = By.className("woocommerce-cart-form__cart-item");
@@ -69,6 +70,13 @@ public class CartPage extends HelperBase {
         click(updateCartButtonLocator);
         return this;
     }
+
+    public CartPage clickOnReturnToShopButton() {
+        click(returnToShopLocator);
+        return this;
+    }
+
+
 
     public boolean cartUpdatedTextIsDisplayed() {
         return textIsDisplayed(cartUpdatedMessageLocator, "Cart updated.");
