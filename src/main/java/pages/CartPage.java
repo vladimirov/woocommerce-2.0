@@ -16,19 +16,16 @@ public class CartPage extends HelperBase {
         super(driver);
     }
 
-    public float totalPriceBefore;
-    ProductPage productPage = new ProductPage(driver);
+    private float totalPriceBefore;
 
     private By productNameInCartLocator = By.xpath("//*[@class='product-name']/a");
     private By productPriceLocator = By.xpath("//td[@class='product-subtotal']/span");
     private By cartItemsList = By.className("woocommerce-cart-form__cart-item");
     private By emptyCartTextLocator = By.className("cart-empty");
     private By qtyLocator = By.cssSelector("input.input-text.qty.text");
-    private By removeProductLocator = By.cssSelector("td.product-remove");
     private By updateCartButtonLocator = By.name("update_cart");
     private By cartUpdatedMessageLocator = By.cssSelector("div.woocommerce-message");
     private By removeProductFromCartLocator = By.xpath("//td[@class='product-remove']/a");
-    private By totalPriceLocator = By.xpath("//*[@id='post-5']/div/div/form/table/tbody/tr[1]/td[6]/span");
     private By proceedToCheckoutButton = By.cssSelector("a.checkout-button.button.alt.wc-forward");
     private By totalLocator = By.xpath("//td[@class='product-subtotal']/span");
 
@@ -79,21 +76,6 @@ public class CartPage extends HelperBase {
 
     public boolean actualProductQty() {
         return elementHasValue(qtyLocator, "4");
-    }
-
-
-    public boolean productSubtotalIsDisplayed() {
-        return textIsDisplayed(totalPriceLocator, "kr12.00");
-    }
-
-
-    public CartPage waitToBeStale() {
-        waitToBeStale(totalPriceLocator);
-        return this;
-    }
-
-    public boolean productSubtotalAfterIncreaseQty() {
-        return textIsDisplayed(totalPriceLocator, "kr48.00");
     }
 
     public boolean qtyOfProductIsTwo() {
