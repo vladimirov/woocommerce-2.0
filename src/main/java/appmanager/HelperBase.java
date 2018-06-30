@@ -242,6 +242,7 @@ public class HelperBase {
     protected String extractElementText(By locator) {
         logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
         element = wait.until(presenceOfElementLocated(locator));
+        logger.info("ELEMENT TEXT IS: " + element.getText());
         return element.getText();
     }
 

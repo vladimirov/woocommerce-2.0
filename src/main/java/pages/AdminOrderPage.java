@@ -58,11 +58,11 @@ public class AdminOrderPage extends HelperBase {
     }
 
     public String orderNumberOnOrderCreationPage() {
-        return extractElementPartialText(orderHeadingLocator, 7, 9);
+        return extractElementPartialText(orderHeadingLocator, 7, 10);
     }
 
     public String orderNumberOnOrdersListPage() {
-        return extractElementPartialText(orderHeadingInOrdersLocator, 1, 3);
+        return extractElementPartialText(orderHeadingInOrdersLocator, 1, 4);
     }
 
     public void moveToTrashTestOrder() {
@@ -71,7 +71,7 @@ public class AdminOrderPage extends HelperBase {
     }
 
     public boolean orderDeletedMessageIsDisplayed(){
-        return textIsDisplayed("1 order moved to the Trash. ", orderDeletedMessageLocator);
+        return textIsDisplayed("1 order moved to the Trash. Undo", orderDeletedMessageLocator);
     }
 
 }

@@ -43,6 +43,9 @@ public class PlaceOrderTest extends TestBase{
         app.loginToAdmin();
         app.adminOrderPage().goToOrdersMenu();
         assertEquals(orderNumber, app.adminOrderPage().orderNumberOnOrdersListPage());
+
+        //Delete test order
+        app.adminOrderPage().moveToTrashTestOrder();
         assertTrue(app.adminOrderPage().orderDeletedMessageIsDisplayed());
 
     }
