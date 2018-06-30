@@ -38,5 +38,12 @@ public class PlaceOrderTest extends TestBase{
         assertEquals(product.getPrice(), productInOrders.getPrice());
         assertTrue(app.checkoutPage().validateQtyOfProductInOrderDetails());
 
+        //Validate order number in admin
+        String orderNumber = app.checkoutPage().orderNumberOnOrdersPage();
+        app.loginToAdmin();
+        app.adminOrderPage().goToOrdersMenu();
+        assertEquals(orderNumber, app.adminOrderPage().orderNumberOnOrdersListPage());
+        assertTrue(app.adminOrderPage().orderDeletedMessageIsDisplayed());
+
     }
 }

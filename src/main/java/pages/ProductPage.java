@@ -36,16 +36,8 @@ public class ProductPage extends HelperBase {
     }
 
     public ProductPage addProductToCart() {
-
-        try{
-            click(productAddToCartButtonLocator);
-            return this;
-        } catch (Exception ex) {
-
-        }
-
-//        click(productAddToCartButtonLocator);
-//        return this;
+        click(productAddToCartButtonLocator);
+        return this;
     }
 
     public String actualProductName() {

@@ -34,6 +34,8 @@ public class CheckoutPage extends HelperBase {
     private By orderedProductNameLocator = By.xpath("//td[@class='woocommerce-table__product-name product-name']/a");
     private By orderedProductPriceLocator = By.xpath("//td[@class='woocommerce-table__product-total product-total']/span");
     private By orderedProductQtyLocator = By.className("product-quantity");
+    private By orderNumberLocator = By.xpath("//li[@class='woocommerce-order-overview__order order']/strong");
+
 
 
     public CheckoutPage enterFirstName() {
@@ -102,6 +104,10 @@ public class CheckoutPage extends HelperBase {
 
     public boolean validateQtyOfProductInOrderDetails() {
         return textIsDisplayed(orderedProductQty, orderedProductQtyLocator);
+    }
+
+    public String orderNumberOnOrdersPage() {
+        return extractElementText(orderNumberLocator);
     }
 
 }

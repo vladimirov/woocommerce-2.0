@@ -20,5 +20,11 @@ public class AdminOrderCreationTest extends TestBase {
         app.adminOrderPage().goToOrdersMenu();
 
         assertEquals(orderNumber, app.adminOrderPage().orderNumberOnOrdersListPage());
+
+        //delete test order
+        app.adminOrderPage().moveToTrashTestOrder();
+
+
+
     }
 }

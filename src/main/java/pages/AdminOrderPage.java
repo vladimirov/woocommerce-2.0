@@ -11,7 +11,6 @@ public class AdminOrderPage extends HelperBase {
     }
 
     private String successMessage = "Order status changed from Pending payment to Processing.";
-    private String noOrdersFoundText = "No orders found";
 
     private By wooMenuLocator = By.id("toplevel_page_woocommerce");
     private By ordersMenuLocator = By.xpath("//ul[@class='wp-submenu wp-submenu-wrap']/li[2]/a[@href='edit.php?post_type=shop_order']");
@@ -21,10 +20,11 @@ public class AdminOrderPage extends HelperBase {
     private By createButtonLocator = By.name("save");
     private By noteTextLocator = By.cssSelector("div.note_content");
     private By orderListLocator = By.id("the-list");
-    private By moveToTrashButtonLocator = By.className("submitdelete");
     private By noOrdersFoundLocator = By.className("colspanchange");
     private By orderHeadingLocator = By.cssSelector("h2.woocommerce-order-data__heading");
     private By orderHeadingInOrdersLocator = By.cssSelector("a.order-view");
+    private By moveToTrashLocator = By.id("delete-action");
+    private By orderDeletedMessageLocator = By.xpath("//div[@id='message']/p");
 
 
     public AdminOrderPage goToOrdersMenu() {
@@ -57,24 +57,21 @@ public class AdminOrderPage extends HelperBase {
         return textIsDisplayed(successMessage, noteTextLocator);
     }
 
-    public AdminOrderPage moveToTrashTestOrder() {
-//        deleteTestData();
-        hoverOnElement(orderListLocator);
-        click(moveToTrashButtonLocator);
-        return this;
-    }
-
-    public boolean noOrdersFoundTextIsDisplayed() {
-        return textIsDisplayed(noOrdersFoundText, noOrdersFoundLocator);
-    }
-
     public String orderNumberOnOrderCreationPage() {
-
         return extractElementPartialText(orderHeadingLocator, 7, 9);
     }
 
     public String orderNumberOnOrdersListPage() {
         return extractElementPartialText(orderHeadingInOrdersLocator, 1, 3);
+    }
+
+    public void moveToTrashTestOrder() {
+        click(orderHeadingInOrdersLocator);
+        click(moveToTrashLocator);
+    }
+
+    public boolean orderDeletedMessageIsDisplayed(){
+        return textIsDisplayed("1 order moved to the Trash. ", orderDeletedMessageLocator);
     }
 
 }

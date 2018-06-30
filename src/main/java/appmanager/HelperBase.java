@@ -239,5 +239,11 @@ public class HelperBase {
         return element.getText().substring(beginIndex, endIndex);
     }
 
+    protected String extractElementText(By locator) {
+        logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
+        element = wait.until(presenceOfElementLocated(locator));
+        return element.getText();
+    }
+
 }
 
