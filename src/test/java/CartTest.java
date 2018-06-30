@@ -26,11 +26,17 @@ public class CartTest extends TestBase {
         System.out.println(String.valueOf(product.getPrice()));
         System.out.println(String.valueOf(productInCart.getPrice()));
 
-        //should increases item qty when "Add to cart" of the same product is clicked
+        //should increases item qty and total when "Add to cart" of the same product is clicked
+        float totalBefore = app.cartPage().totalPriceBeforeIncrease();
         app.cartPage().clickOnProductNameInCart();
         app.shopPage().addProductToCart();
         app.openCartPage();
+        float totalAfter = app.cartPage().totalPriceAfterIncrease();
+
         assertTrue(app.cartPage().qtyOfProductIsTwo());
+        assertEquals(totalAfter, totalBefore * 2, 0.0);
+        System.out.println(totalBefore);
+        System.out.println(totalAfter);
 
         //should updates qty when updated via qty input
         app.cartPage().increaseQuantityOfProduct();
@@ -41,22 +47,10 @@ public class CartTest extends TestBase {
         //should remove the item from the cart when remove is clicked
         app.cartPage().removeProductFromCart();
         assertTrue(app.cartPage().emptyCartTextIsDisplayed());
-//
-//        //should update subtotal in cart totals when adding product to the cart
-//        app.shopPage().openFirstProductPageAndAddToCart();
-//        app.cartPage().openCartPage();
-//        assertEquals(app.cartPage().productNameIsDisplayed(), true);
-//        assertEquals(app.cartPage().productQtyIsDisplayed(), true);
-//        assertEquals(app.cartPage().productSubtotalIsDisplayed(), true);
-//
-//        app.cartPage().increaseQuantityOfProduct();
-//        app.cartPage().clickOnUpdateCartButton();
-//        app.cartPage().waitToBeStale();
-//        assertEquals(app.cartPage().productSubtotalAfterIncreaseQty(), true);
-//
-//        //should go to the checkout page when "Proceed to Chcekout" is clicked
-//        app.cartPage().clickOnProceedToCheckoutButton();
-//        assertEquals(app.checkoutPage().orderReviewIsOnPage(), true);
+
+        //should go to the checkout page when "Proceed to Checkout" is clicked
+        app.cartPage().clickOnProceedToCheckoutButton();
+        assertTrue(app.checkoutPage().orderReviewIsOnPage());
 
     }
 }

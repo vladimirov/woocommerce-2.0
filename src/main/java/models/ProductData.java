@@ -22,41 +22,12 @@ public class ProductData {
         return name;
     }
 
-    public String nameInCart() {
-        return name;
-    }
-
     public float getPrice() {
         return price;
     }
 
     public String getDescription() {
         return description;
-    }
-
-    public ProductData withName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public ProductData withPrice(float price) {
-        this.price = price;
-        return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ProductData that = (ProductData) o;
-        return Float.compare(that.price, price) == 0 &&
-                Objects.equals(name, that.name);
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(name, price);
     }
 
     /**
@@ -68,4 +39,31 @@ public class ProductData {
                 "New Product " + System.currentTimeMillis(),
                 (float) Math.round(random.nextInt(100_00) + 1) / 100);
     }
+
+//    public ProductData withName(String name) {
+//        this.name = name;
+//        return this;
+//    }
+//
+//    public ProductData withPrice(float price) {
+//        this.price = price;
+//        return this;
+//    }
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        ProductData that = (ProductData) o;
+//        return Float.compare(that.price, price) == 0 &&
+//                Objects.equals(name, that.name);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//
+//        return Objects.hash(name, price);
+//    }
+
+
 }

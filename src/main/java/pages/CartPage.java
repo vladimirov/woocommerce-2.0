@@ -16,6 +16,7 @@ public class CartPage extends HelperBase {
         super(driver);
     }
 
+    public float totalPriceBefore;
     ProductPage productPage = new ProductPage(driver);
 
     private By productNameInCartLocator = By.xpath("//*[@class='product-name']/a");
@@ -29,6 +30,7 @@ public class CartPage extends HelperBase {
     private By removeProductFromCartLocator = By.xpath("//td[@class='product-remove']/a");
     private By totalPriceLocator = By.xpath("//*[@id='post-5']/div/div/form/table/tbody/tr[1]/td[6]/span");
     private By proceedToCheckoutButton = By.cssSelector("a.checkout-button.button.alt.wc-forward");
+    private By totalLocator = By.xpath("//td[@class='product-subtotal']/span");
 
 
     public ProductData productInfoInCart() {
@@ -38,6 +40,16 @@ public class CartPage extends HelperBase {
         float price = DataConverter.parsePriceValue(driver.findElement(productPriceLocator).getText());
         return new ProductData(name, price);
     }
+
+    public float totalPriceBeforeIncrease() {
+        totalPriceBefore = DataConverter.parsePriceValue(driver.findElement(totalLocator).getText());
+        return totalPriceBefore;
+    }
+
+    public float totalPriceAfterIncrease() {
+        return totalPriceBefore * 2;
+    }
+
 
     public boolean validateNumberOfItemsInCart() {
         List<WebElement> allCartItems = driver.findElements(cartItemsList);
@@ -61,7 +73,7 @@ public class CartPage extends HelperBase {
         return this;
     }
 
-    public boolean cartUpdatedTextIsDisplayed(){
+    public boolean cartUpdatedTextIsDisplayed() {
         return textIsDisplayed(cartUpdatedMessageLocator, "Cart updated.");
     }
 
