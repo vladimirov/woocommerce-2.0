@@ -6,19 +6,26 @@ import static org.testng.Assert.assertTrue;
 
 public class CartTest extends TestBase {
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void cartPage() {
         app.openCartPage();
+
         assertTrue(app.cartPage().emptyCartTextIsDisplayed());
 
         app.shopPage().openShopPage();
         app.shopPage().openRandomProduct();
-        ProductData nameAndPriceOnProductPage =  app.productPage().productInfoOnProductPage();
+        ProductData product =  app.productPage().productInfoOnProductPage();
         app.shopPage().addProductToCart();
         app.openCartPage();
-        ProductData nameAndPriceInCart = app.cartPage().productInfoInCart();
+        ProductData productInCart = app.cartPage().productInfoInCart();
 
-        assertEquals(nameAndPriceOnProductPage, nameAndPriceInCart);
+        assertEquals(product.getName(), productInCart.getName());
+        System.out.println(String.valueOf(product.getName()));
+        System.out.println(String.valueOf(productInCart.getName()));
+
+        assertEquals(product.getPrice(), productInCart.getPrice());
+        System.out.println(String.valueOf(product.getPrice()));
+        System.out.println(String.valueOf(productInCart.getPrice()));
 
 //        app.shopPage().openSecondProductPageAndAddToCart();
 //        app.goTo().gotoCartPage();
