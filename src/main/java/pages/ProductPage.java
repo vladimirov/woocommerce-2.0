@@ -15,8 +15,8 @@ public class ProductPage extends HelperBase {
     }
 
     private By productTitleLocator = By.cssSelector("h1.product_title.entry-title");
-    private By productPriceLocator = By.xpath("//p[@class='price']/ins/span");
-    private By productOnSalePriceLocator = By.xpath("//p[@class='price']/span");
+    private By productPriceLocator = By.xpath("//p[@class='price']/span");
+    private By productOnSalePriceLocator = By.xpath("//p[@class='price']/ins/span");
     private By productAddToCartButtonLocator = By.name("add-to-cart");
     private By qtyLocator = By.cssSelector("input.input-text.qty.text");
 
