@@ -44,13 +44,16 @@ public class CartTest extends TestBase {
         assertTrue(app.cartPage().cartUpdatedTextIsDisplayed());
         assertTrue(app.cartPage().actualProductQty());
 
-        //should remove the item from the cart when remove is clicked
-        app.cartPage().removeProductFromCart();
-        assertTrue(app.cartPage().emptyCartTextIsDisplayed());
-
         //should go to the checkout page when "Proceed to Checkout" is clicked
         app.cartPage().clickOnProceedToCheckoutButton();
         assertTrue(app.checkoutPage().orderReviewIsOnPage());
+
+        //should remove the item from the cart when remove is clicked
+        app.openCartPage();
+        app.cartPage().removeProductFromCart();
+        assertTrue(app.cartPage().emptyCartTextIsDisplayed());
+
+
 
     }
 }

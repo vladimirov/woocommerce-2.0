@@ -6,7 +6,7 @@ import static org.testng.Assert.*;
 public class PlaceOrderTest extends TestBase{
 
     @Test
-    public void placeOrderTest() throws InterruptedException {
+    public void placeOrderTest() {
         app.openBaseUrl();
         app.shopPage().openShopPage();
         app.shopPage().openRandomProduct();
