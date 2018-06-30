@@ -19,7 +19,6 @@ public class ShopPage extends HelperBase {
     private String productOneUrl = "baseUrl" + "/flying-ninja";
     private String productTwoUrl = "baseUrl" + "/happy-ninja-2";
 
-
     private By addToCartButtonLocator = By.cssSelector("button.single_add_to_cart_button");
     private By productTitleLocator = By.className("woocommerce-loop-product__title");
     private By shopMenuLocator = By.linkText("Shop");
@@ -50,5 +49,10 @@ public class ShopPage extends HelperBase {
         return this;
     }
 
+//    public ShopPage findAddedProductOnSite() {
+//        type(searchProductsInputLocator, name);
+//        submit(searchProductsInputLocator);
+//        return this;
+//    }
 
 }

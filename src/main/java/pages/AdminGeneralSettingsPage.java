@@ -58,7 +58,7 @@ public class AdminGeneralSettingsPage extends HelperBase {
     }
 
     public boolean generalTabIsActive() {
-        return elementHasClass(active, generalTabLocator);
+        return elementHasClass(generalTabLocator, active);
     }
 
     public AdminGeneralSettingsPage clickOnSellingLocationDropdown() {
@@ -78,7 +78,7 @@ public class AdminGeneralSettingsPage extends HelperBase {
     }
 
     public boolean successMessageIsDisplayed() {
-        return textIsDisplayed(successMessage, settingsSavedMessageLocator);
+        return textIsDisplayed(settingsSavedMessageLocator, successMessage);
     }
 
 

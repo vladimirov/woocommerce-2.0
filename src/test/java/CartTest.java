@@ -20,35 +20,27 @@ public class CartTest extends TestBase {
         ProductData productInCart = app.cartPage().productInfoInCart();
 
         assertEquals(product.getName(), productInCart.getName());
+        assertEquals(product.getPrice(), productInCart.getPrice());
         System.out.println(String.valueOf(product.getName()));
         System.out.println(String.valueOf(productInCart.getName()));
-
-        assertEquals(product.getPrice(), productInCart.getPrice());
         System.out.println(String.valueOf(product.getPrice()));
         System.out.println(String.valueOf(productInCart.getPrice()));
 
-//        app.shopPage().openSecondProductPageAndAddToCart();
-//        app.goTo().gotoCartPage();
-//        assertTrue(app.cartPage().flyingNinjaTextIsDisplayed());
-//        assertTrue(app.cartPage().happyNinjaTextIsDisplayed());
+        //should increases item qty when "Add to cart" of the same product is clicked
+        app.cartPage().clickOnProductNameInCart();
+        app.shopPage().addProductToCart();
+        app.openCartPage();
+        assertTrue(app.cartPage().qtyOfProductIsTwo());
 
-//        //should increases item qty when "Add to cart" of the same product is clicked
-//        app.cartPage().goToFlyingNinjaProductPage();
-//        app.shopPage().addProductToCart();
-//        app.cartPage().openCartPage();
-//        assertTrue(app.cartPage().quantityOfItemsIsTwo());
-//
-//        //should updates qty when updated via qty input
-//        app.cartPage().increaseQuantityOfFirstProduct();
-//        app.cartPage().increaseQuantityOfSecondProduct();
-//        app.cartPage().clickOnUpdateCartButton();
-//        assertEquals(app.cartPage().getActualQtyOfFirstProduct(), true);
-//        assertEquals(app.cartPage().getActualQtyOfSecondProduct(), true);
-//
-//        //should remove the item from the cart when remove is clicked
-//        app.cartPage().clickOnRemoveButton();
-//        app.cartPage().clickOnRemoveButton();
-//        assertTrue(app.cartPage().emptyCartTextIsDisplayed());
+        //should updates qty when updated via qty input
+        app.cartPage().increaseQuantityOfProduct();
+        app.cartPage().clickOnUpdateCartButton();
+        assertTrue(app.cartPage().cartUpdatedTextIsDisplayed());
+        assertTrue(app.cartPage().actualProductQty());
+
+        //should remove the item from the cart when remove is clicked
+        app.cartPage().removeProductFromCart();
+        assertTrue(app.cartPage().emptyCartTextIsDisplayed());
 //
 //        //should update subtotal in cart totals when adding product to the cart
 //        app.shopPage().openFirstProductPageAndAddToCart();
@@ -57,7 +49,7 @@ public class CartTest extends TestBase {
 //        assertEquals(app.cartPage().productQtyIsDisplayed(), true);
 //        assertEquals(app.cartPage().productSubtotalIsDisplayed(), true);
 //
-//        app.cartPage().increaseQuantityOfFirstProduct();
+//        app.cartPage().increaseQuantityOfProduct();
 //        app.cartPage().clickOnUpdateCartButton();
 //        app.cartPage().waitToBeStale();
 //        assertEquals(app.cartPage().productSubtotalAfterIncreaseQty(), true);

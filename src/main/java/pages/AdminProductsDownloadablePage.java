@@ -73,7 +73,7 @@ public class AdminProductsDownloadablePage extends HelperBase {
     }
 
     public boolean successMessageIsDisplayed() {
-        return textIsDisplayed(successMessage, settingsSavedMessageLocator);
+        return textIsDisplayed(settingsSavedMessageLocator, successMessage);
     }
 
 }

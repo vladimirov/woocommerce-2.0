@@ -87,7 +87,7 @@ public class CheckoutPage extends HelperBase {
     }
 
     public boolean successNoticeTextIsDisplayed() {
-        return textIsDisplayed(successNotice, successNoticeLocator);
+        return textIsDisplayed(successNoticeLocator, successNotice);
     }
 
     public boolean orderReviewIsOnPage() {
@@ -103,7 +103,7 @@ public class CheckoutPage extends HelperBase {
     }
 
     public boolean validateQtyOfProductInOrderDetails() {
-        return textIsDisplayed(orderedProductQty, orderedProductQtyLocator);
+        return textIsDisplayed(orderedProductQtyLocator, orderedProductQty);
     }
 
     public String orderNumberOnOrdersPage() {

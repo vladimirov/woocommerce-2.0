@@ -100,7 +100,7 @@ public class AdminTaxPage extends HelperBase {
     }
 
     public boolean successMessageIsDisplayed() {
-        return textIsDisplayed(successMessage, settingsSavedMessageLocator);
+        return textIsDisplayed(settingsSavedMessageLocator, successMessage);
     }
 
     public AdminTaxPage removeAdditionalTaxClasses() {

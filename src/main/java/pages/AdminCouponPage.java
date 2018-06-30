@@ -94,7 +94,7 @@ public class AdminCouponPage extends HelperBase {
     }
 
     public boolean successMessageIsDisplayed() {
-        return textIsDisplayed(successMessage, couponUpdatedMessageLocator);
+        return textIsDisplayed(couponUpdatedMessageLocator, successMessage);
     }
 
     public AdminCouponPage moveToTrashTestCoupon() {

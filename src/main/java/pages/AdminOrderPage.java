@@ -54,7 +54,7 @@ public class AdminOrderPage extends HelperBase {
     }
 
     public boolean orderNoteMessageIsDisplayed() {
-        return textIsDisplayed(successMessage, noteTextLocator);
+        return textIsDisplayed(noteTextLocator, successMessage);
     }
 
     public String orderNumberOnOrderCreationPage() {
@@ -71,7 +71,7 @@ public class AdminOrderPage extends HelperBase {
     }
 
     public boolean orderDeletedMessageIsDisplayed(){
-        return textIsDisplayed("1 order moved to the Trash. Undo", orderDeletedMessageLocator);
+        return textIsDisplayed(orderDeletedMessageLocator, "1 order moved to the Trash. Undo");
     }
 
 }

@@ -159,7 +159,7 @@ public class HelperBase {
         }
     }
 
-    protected boolean isTextDisplayed(String text, By locator) {
+    protected boolean isTextDisplayed(By locator, String text) {
         logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
         element = wait.until(presenceOfElementLocated(locator));
         logger.info("ACTUAL TEXT:   " + element.getText());
@@ -187,17 +187,15 @@ public class HelperBase {
         jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 
-    protected boolean textIsDisplayed(String text, By locator) {
+    protected boolean textIsDisplayed(By locator, String text) {
         logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
         element = wait.until(presenceOfElementLocated(locator));
-
         logger.info("ACTUAL TEXT:   " + element.getText());
         logger.info("EXPECTED TEXT: " + text);
-
         return element.getText().equals(text);
     }
 
-    protected boolean elementHasClass(String active, By locator) {
+    protected boolean elementHasClass(By locator, String active) {
         logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
         element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 
@@ -222,13 +220,11 @@ public class HelperBase {
         }
     }
 
-    protected boolean elementHasValue(String expectedValue, By locator) {
+    protected boolean elementHasValue(By locator, String expectedValue) {
         logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
         element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-
         logger.info("EXPECTED VALUE: " + expectedValue);
         logger.info("ACTUAL VALUE:   " + element.getAttribute("value"));
-
         return element.getAttribute("value").equals(expectedValue);
     }
 

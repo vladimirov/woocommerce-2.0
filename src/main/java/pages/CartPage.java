@@ -18,27 +18,15 @@ public class CartPage extends HelperBase {
 
     ProductPage productPage = new ProductPage(driver);
 
-    private String emptyCartText = "Your cart is currently empty.";
-    private String flyingNinjaText = "Flying Ninja";
-    private String happyNinjaText = "Happy Ninja";
-    private String quantityOfProduct = "2";
-    private String expectedValueOfFirstProduct = "4";
-    private String expectedValueOfSecondProduct = "3";
-
     private By productNameInCartLocator = By.xpath("//*[@class='product-name']/a");
     private By productPriceLocator = By.xpath("//td[@class='product-subtotal']/span");
     private By cartItemsList = By.className("woocommerce-cart-form__cart-item");
     private By emptyCartTextLocator = By.className("cart-empty");
-    private By qtyLocator = By.xpath("//input[@class='input-text qty text']");
+    private By qtyLocator = By.cssSelector("input.input-text.qty.text");
     private By removeProductLocator = By.cssSelector("td.product-remove");
-
-    private By flyingNinjaProductLocator = By.xpath("//*[@id='post-5']/div/div/form/table/tbody/tr[1]/td[3]/a");
-    private By happyNinjaProductLocator = By.xpath("//*[@id='post-5']/div/div/form/table/tbody/tr[2]/td[3]/a");
-    private By qtyOfFirstProductLocator = By.xpath("//*[@id='post-5']/div/div/form/table/tbody/tr[1]/td[5]/div/input");
-    private By qtyOfSecondProductLocator = By.xpath("//*[@id='post-5']/div/div/form/table/tbody/tr[2]/td[5]/div/input");
-
     private By updateCartButtonLocator = By.name("update_cart");
-    private By removeFirstProductButtonLocator = By.xpath("//*[@id='post-5']/div/div/form/table/tbody/tr[1]/td[1]/a");
+    private By cartUpdatedMessageLocator = By.cssSelector("div.woocommerce-message");
+    private By removeProductFromCartLocator = By.xpath("//td[@class='product-remove']/a");
     private By totalPriceLocator = By.xpath("//*[@id='post-5']/div/div/form/table/tbody/tr[1]/td[6]/span");
     private By proceedToCheckoutButton = By.cssSelector("a.checkout-button.button.alt.wc-forward");
 
@@ -63,36 +51,8 @@ public class CartPage extends HelperBase {
         return this;
     }
 
-    public boolean emptyCartTextIsDisplayed() {
-        return textIsDisplayed(emptyCartText, emptyCartTextLocator);
-    }
-
-    public boolean flyingNinjaTextIsDisplayed() {
-        return textIsDisplayed(flyingNinjaText, flyingNinjaProductLocator);
-    }
-
-    public boolean happyNinjaTextIsDisplayed() {
-        return textIsDisplayed(happyNinjaText, happyNinjaProductLocator);
-    }
-
-    public CartPage goToFlyingNinjaProductPage() {
-        click(flyingNinjaProductLocator);
-        return this;
-    }
-
-    public boolean quantityOfItemsIsTwo() {
-        return elementHasValue(quantityOfProduct, qtyOfFirstProductLocator);
-    }
-
-    public CartPage increaseQuantityOfFirstProduct() {
-        clear(qtyOfFirstProductLocator);
-        type(qtyOfFirstProductLocator, "4");
-        return this;
-    }
-
-    public CartPage increaseQuantityOfSecondProduct() {
-        clear(qtyOfSecondProductLocator);
-        type(qtyOfSecondProductLocator, "3");
+    public CartPage increaseQuantityOfProduct() {
+        type(qtyLocator, "4");
         return this;
     }
 
@@ -101,30 +61,17 @@ public class CartPage extends HelperBase {
         return this;
     }
 
-    public boolean getActualQtyOfFirstProduct() {
-        return elementHasValue(expectedValueOfFirstProduct, qtyOfFirstProductLocator);
+    public boolean cartUpdatedTextIsDisplayed(){
+        return textIsDisplayed(cartUpdatedMessageLocator, "Cart updated.");
     }
 
-    public boolean getActualQtyOfSecondProduct() {
-        return elementHasValue(expectedValueOfSecondProduct, qtyOfSecondProductLocator);
+    public boolean actualProductQty() {
+        return elementHasValue(qtyLocator, "4");
     }
 
-    public CartPage clickOnRemoveButton() throws InterruptedException {
-        Thread.sleep(2000);
-        click(removeFirstProductButtonLocator);
-        return this;
-    }
-
-    public boolean productNameIsDisplayed() {
-        return textIsDisplayed(flyingNinjaText, flyingNinjaProductLocator);
-    }
-
-    public boolean productQtyIsDisplayed() {
-        return elementHasValue("1", qtyOfFirstProductLocator);
-    }
 
     public boolean productSubtotalIsDisplayed() {
-        return textIsDisplayed("kr12.00", totalPriceLocator);
+        return textIsDisplayed(totalPriceLocator, "kr12.00");
     }
 
 
@@ -134,18 +81,25 @@ public class CartPage extends HelperBase {
     }
 
     public boolean productSubtotalAfterIncreaseQty() {
-        return textIsDisplayed("kr48.00", totalPriceLocator);
+        return textIsDisplayed(totalPriceLocator, "kr48.00");
     }
 
-//    public boolean qtyOfProductIsFive() {
-//        return elementHasValue(productPage.newQty, qtyLocator);
-//    }
+    public boolean qtyOfProductIsTwo() {
+        return elementHasValue(qtyLocator, "2");
+    }
 
     public CartPage removeProductFromCart() {
-        click(removeProductLocator);
-        waitToBePresent(emptyCartTextLocator);
+        click(removeProductFromCartLocator);
         return this;
     }
 
+    public boolean emptyCartTextIsDisplayed() {
+        return textIsDisplayed(emptyCartTextLocator, "Your cart is currently empty.");
+    }
+
+    public CartPage clickOnProductNameInCart() {
+        click(productNameInCartLocator);
+        return this;
+    }
 
 }

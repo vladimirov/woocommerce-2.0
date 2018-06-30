@@ -193,11 +193,11 @@ public class AdminProductPage extends HelperBase {
 
     //Name that displays on Cart Page
     public boolean newSimpleProductIsDisplayedInCart() {
-        return textIsDisplayed(name, productNameInCartLocator);
+        return textIsDisplayed(productNameInCartLocator, name);
     }
 
     public boolean noProductsFoundTextIsDisplayed(){
-        return textIsDisplayed("No products found", noProductsFoundMessageLocator);
+        return textIsDisplayed(noProductsFoundMessageLocator, "No products found");
     }
 
 
