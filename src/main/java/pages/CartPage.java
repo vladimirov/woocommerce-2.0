@@ -76,8 +76,6 @@ public class CartPage extends HelperBase {
         return this;
     }
 
-
-
     public boolean cartUpdatedTextIsDisplayed() {
         return textIsDisplayed(cartUpdatedMessageLocator, "Cart updated.");
     }
@@ -93,6 +91,14 @@ public class CartPage extends HelperBase {
     public CartPage removeProductFromCart() {
         click(removeProductFromCartLocator);
         return this;
+    }
+
+    public boolean removeButtonIsDisplayed(){
+        return isElementOnPage(removeProductFromCartLocator);
+    }
+
+    public boolean returnToShopButtonIsDisplayed(){
+        return isElementOnPage(returnToShopLocator);
     }
 
     public boolean emptyCartTextIsDisplayed() {

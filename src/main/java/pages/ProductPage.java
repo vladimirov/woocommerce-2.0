@@ -8,8 +8,6 @@ import utils.DataConverter;
 
 public class ProductPage extends HelperBase {
 
-    String newQty = "5";
-
     public ProductPage(WebDriver driver) {
         super(driver);
     }
@@ -50,7 +48,7 @@ public class ProductPage extends HelperBase {
 
     public ProductPage setNewQty() {
         clear(qtyLocator);
-        type(qtyLocator, newQty);
+        type(qtyLocator, "5");
         return this;
     }
 
@@ -58,20 +56,5 @@ public class ProductPage extends HelperBase {
         click(productAddToCartButtonLocator);
         return this;
     }
-
-//    public ProductPage productCartContentsClick() {
-//        waitToBePresentAndClick(productCartContentsLocator);
-//        return this;
-//    }
-//
-//    public ProductPage quantityOfGoodsOnCartPageClick() {
-//        waitToBePresentAndClick(productCartQuantityLocator);
-//        return this;
-//    }
-//
-//    public String getQuantityOfGoodsOnCartPage() {
-//        quantityOfGoodsOnCartPage = driver.findElement(productCartQuantityLocator).getAttribute("value");
-//        return quantityOfGoodsOnCartPage;
-//    }
 
 }

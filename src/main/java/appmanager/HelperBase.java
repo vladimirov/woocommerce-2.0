@@ -12,11 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.testng.internal.Utils;
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Properties;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 import static org.testng.AssertJUnit.fail;
@@ -151,6 +148,7 @@ public class HelperBase {
         logger.info("TRY TO FIND ELEMENT: " + locator);
         try {
             logger.info("ELEMENT IS ON PAGE: " + locator);
+            element = wait.until(presenceOfElementLocated(locator));
             driver.findElement(locator);
             return true;
         } catch (NoSuchElementException e) {
@@ -160,11 +158,17 @@ public class HelperBase {
     }
 
     protected boolean isTextDisplayed(By locator, String text) {
-        logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
-        element = wait.until(presenceOfElementLocated(locator));
-        logger.info("ACTUAL TEXT:   " + element.getText());
-        logger.info("EXPECTED TEXT: " + text);
-        return element.getText().equals(text);
+        logger.info("TRY TO FIND TEXT: " + text);
+        try {
+            logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
+            element = wait.until(presenceOfElementLocated(locator));
+            logger.info("ACTUAL TEXT:   " + element.getText());
+            logger.info("EXPECTED TEXT: " + text);
+            return element.getText().equals(text);
+        } catch (NoSuchElementException e) {
+            logger.info("TEXT IS NOT FOUND: " + locator);
+            return false;
+        }
     }
 
     protected void scrollUp() {
@@ -176,7 +180,6 @@ public class HelperBase {
     protected void scrollTillElementIsVisible(By locator) {
         logger.info("SCROLL TILL ELEMENT IS VISIBLE: " + locator);
         element = wait.until(presenceOfElementLocated(locator));
-
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].scrollIntoView();", element);
     }
