@@ -16,9 +16,6 @@ public class CheckoutPage extends HelperBase {
 
     BuyerData buyer = BuyerData.generate();
 
-    private String successNotice = "Thank you. Your order has been received.";
-    private String orderedProductQty = "× 1";
-
     private By firstNameLocator = By.id("billing_first_name");
     private By lastNameLocator = By.id("billing_last_name");
     private By streetAddressLocator = By.id("billing_address_1");
@@ -33,7 +30,8 @@ public class CheckoutPage extends HelperBase {
     private By successNoticeLocator = By.xpath("//div[@class='woocommerce-order']/p");
     private By orderedProductNameLocator = By.xpath("//td[@class='woocommerce-table__product-name product-name']/a");
     private By orderedProductPriceLocator = By.xpath("//td[@class='woocommerce-table__product-total product-total']/span");
-    private By orderedProductQtyLocator = By.className("product-quantity");
+//    private By orderedProductQtyLocator = By.className("product-quantity");
+    private By orderedProductQtyLocator = By.cssSelector("strong.product-quantity");
     private By orderNumberLocator = By.xpath("//li[@class='woocommerce-order-overview__order order']/strong");
 
 
@@ -78,7 +76,6 @@ public class CheckoutPage extends HelperBase {
     }
 
     public CheckoutPage placeOrderButtonClick() {
-//        scrollDownToFooter();
         scrollTillElementIsVisible(placeOrderButtonLocator);
         waitToBeStale(placeOrderButtonLocator);
         click(placeOrderButtonLocator);
@@ -86,7 +83,7 @@ public class CheckoutPage extends HelperBase {
     }
 
     public boolean successNoticeTextIsDisplayed() {
-        return textIsDisplayed(successNoticeLocator, successNotice);
+        return textIsDisplayed(successNoticeLocator, "Thank you. Your order has been received.");
     }
 
     public boolean orderReviewHeadingIsOnPage() {
@@ -102,7 +99,8 @@ public class CheckoutPage extends HelperBase {
     }
 
     public boolean validateQtyOfProductInOrderDetails() {
-        return textIsDisplayed(orderedProductQtyLocator, orderedProductQty);
+        String qty = extractElementPartialText(orderedProductQtyLocator, 2, 3);
+        return qty.equals("1");
     }
 
     public String orderNumberOnOrdersPage() {

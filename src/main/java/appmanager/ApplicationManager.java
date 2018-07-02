@@ -97,7 +97,6 @@ public class ApplicationManager {
         driver.get(properties.getProperty("web.baseUrl") + "cart");
     }
 
-
     public void stop() {
         driver.quit();
     }
