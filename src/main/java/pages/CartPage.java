@@ -93,11 +93,11 @@ public class CartPage extends HelperBase {
         return this;
     }
 
-    public boolean removeButtonIsDisplayed(){
+    public boolean removeButtonIsDisplayed() {
         return isElementOnPage(removeProductFromCartLocator);
     }
 
-    public boolean returnToShopButtonIsDisplayed(){
+    public boolean returnToShopButtonIsDisplayed() {
         return isElementOnPage(returnToShopLocator);
     }
 

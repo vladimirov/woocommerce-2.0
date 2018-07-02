@@ -1,9 +1,10 @@
 import models.ProductData;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
-public class PlaceOrderTest extends TestBase{
+public class PlaceOrderTest extends TestBase {
 
     @Test(groups = {"end2end"})
     public void placeOrderTest() {

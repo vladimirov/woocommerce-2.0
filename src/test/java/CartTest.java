@@ -15,7 +15,8 @@ public class CartTest extends TestBase {
         app.shopPage().openShopPage();
         app.shopPage().openRandomProduct();
         ProductData product = app.productPage().productInfoOnProductPage();
-        app.shopPage().addProductToCart();
+        app.productPage().productInfoOnProductPage();
+        app.productPage().addProductToCart();
         app.openCartPage();
         ProductData productInCart = app.cartPage().productInfoInCart();
 
@@ -29,7 +30,7 @@ public class CartTest extends TestBase {
         //should increases item qty and total when "Add to cart" of the same product is clicked
         float totalBefore = app.cartPage().totalPriceBeforeIncrease();
         app.cartPage().clickOnProductNameInCart();
-        app.shopPage().addProductToCart();
+        app.productPage().addProductToCart();
         app.openCartPage();
         float totalAfter = app.cartPage().totalPriceAfterIncrease();
 
@@ -46,7 +47,7 @@ public class CartTest extends TestBase {
 
         //should go to the checkout page when "Proceed to Checkout" is clicked
         app.cartPage().clickOnProceedToCheckoutButton();
-        assertTrue(app.checkoutPage().orderReviewIsOnPage());
+        assertTrue(app.checkoutPage().orderReviewHeadingIsOnPage());
 
         //should remove the item from the cart when remove is clicked
         app.openCartPage();

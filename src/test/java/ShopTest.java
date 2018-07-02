@@ -1,11 +1,10 @@
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertTrue;
 
-public class ShopTest extends TestBase{
+public class ShopTest extends TestBase {
 
-    @Test(priority = 1)
+    @Test(groups = {"end2end"}, priority = 1)
     public void addProductToCart() {
         app.openCartPage();
         assertTrue(app.cartPage().emptyCartTextIsDisplayed());
@@ -19,7 +18,7 @@ public class ShopTest extends TestBase{
         assertTrue(app.cartPage().returnToShopButtonIsDisplayed());
     }
 
-    @Test (priority = 2)
+    @Test(groups = {"end2end"}, priority = 2)
     public void cartPopUp() {
         app.openCartPage();
         app.cartPage().clickOnReturnToShopButton();

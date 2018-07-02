@@ -196,10 +196,9 @@ public class AdminProductPage extends HelperBase {
         return textIsDisplayed(productNameInCartLocator, name);
     }
 
-    public boolean noProductsFoundTextIsDisplayed(){
+    public boolean noProductsFoundTextIsDisplayed() {
         return textIsDisplayed(noProductsFoundMessageLocator, "No products found");
     }
-
 
 
 }

@@ -1,9 +1,8 @@
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 
 public class ProductCreationTest extends TestBase {
@@ -33,7 +32,7 @@ public class ProductCreationTest extends TestBase {
     }
 
     @AfterMethod
-    public void deleteTestProduct(){
+    public void deleteTestProduct() {
         app.openAdminUrl();
         app.adminProductPage().clickOnProductsMenu();
         app.adminProductPage().clickOnAllProductsDropdown();

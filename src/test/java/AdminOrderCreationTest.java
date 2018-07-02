@@ -15,10 +15,9 @@ public class AdminOrderCreationTest extends TestBase {
         app.adminOrderPage().changeOrderStatus();
         String orderNumber = app.adminOrderPage().orderNumberOnOrderCreationPage();
         app.adminOrderPage().clickOnCreateButton();
-
         assertTrue(app.adminOrderPage().orderNoteMessageIsDisplayed());
-        app.adminOrderPage().goToOrdersMenu();
 
+        app.adminOrderPage().goToOrdersMenu();
         assertEquals(orderNumber, app.adminOrderPage().orderNumberOnOrdersListPage());
 
         //delete test order

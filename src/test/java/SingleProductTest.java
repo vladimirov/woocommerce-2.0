@@ -2,7 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class SingleProductTest extends TestBase{
+public class SingleProductTest extends TestBase {
 
 //    @Test(priority = 1)
 //    public void addSimpleProductToCart() {

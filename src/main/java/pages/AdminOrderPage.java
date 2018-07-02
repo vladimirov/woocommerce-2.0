@@ -62,7 +62,9 @@ public class AdminOrderPage extends HelperBase {
     }
 
     public String orderNumberOnOrdersListPage() {
-        return extractElementPartialText(orderHeadingInOrdersLocator, 1, 4);
+        return extractElementPartialText(orderHeadingInOrdersLocator, 1, 4).replaceAll("\\s+", "");
+
+        //4
     }
 
     public void moveToTrashTestOrder() {
@@ -70,7 +72,7 @@ public class AdminOrderPage extends HelperBase {
         click(moveToTrashLocator);
     }
 
-    public boolean orderDeletedMessageIsDisplayed(){
+    public boolean orderDeletedMessageIsDisplayed() {
         return textIsDisplayed(orderDeletedMessageLocator, "1 order moved to the Trash. Undo");
     }
 

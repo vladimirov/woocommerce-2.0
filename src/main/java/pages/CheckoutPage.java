@@ -29,13 +29,12 @@ public class CheckoutPage extends HelperBase {
     private By emailLocator = By.id("billing_email");
     private By phoneLocator = By.id("billing_phone");
     private By placeOrderButtonLocator = By.id("place_order");
-    private By orderReviewLocator = By.id("order_review_heading");
+    private By orderReviewHeadingLocator = By.id("order_review_heading");
     private By successNoticeLocator = By.xpath("//div[@class='woocommerce-order']/p");
     private By orderedProductNameLocator = By.xpath("//td[@class='woocommerce-table__product-name product-name']/a");
     private By orderedProductPriceLocator = By.xpath("//td[@class='woocommerce-table__product-total product-total']/span");
     private By orderedProductQtyLocator = By.className("product-quantity");
     private By orderNumberLocator = By.xpath("//li[@class='woocommerce-order-overview__order order']/strong");
-
 
 
     public CheckoutPage enterFirstName() {
@@ -90,8 +89,8 @@ public class CheckoutPage extends HelperBase {
         return textIsDisplayed(successNoticeLocator, successNotice);
     }
 
-    public boolean orderReviewIsOnPage() {
-        return isElementOnPage(orderReviewLocator);
+    public boolean orderReviewHeadingIsOnPage() {
+        return isElementOnPage(orderReviewHeadingLocator);
     }
 
     public ProductData validateProductDataInOrderDetails() {

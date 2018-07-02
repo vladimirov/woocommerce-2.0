@@ -15,7 +15,7 @@ public class ShopPage extends HelperBase {
         super(driver);
     }
 
-    private By addToCartButtonLocator = By.xpath("//a[contains(text(),'Add to cart')]");
+    private By shopAddToCartButtonLocator = By.xpath("//a[contains(text(),'Add to cart')]");
     private By viewCartButtonLocator = By.cssSelector("a.added_to_cart.wc-forward");
     private By productTitleLocator = By.className("woocommerce-loop-product__title");
     private By shopMenuLocator = By.linkText("Shop");
@@ -35,13 +35,13 @@ public class ShopPage extends HelperBase {
     }
 
     public ShopPage addToCartRandomProduct() {
-        List<WebElement> allProduct = driver.findElements(addToCartButtonLocator);
+        List<WebElement> allProduct = driver.findElements(shopAddToCartButtonLocator);
         allProduct.get(new Random().nextInt(allProduct.size())).click();
         return this;
     }
 
     public ShopPage addProductToCart() {
-        click(addToCartButtonLocator);
+        click(shopAddToCartButtonLocator);
         return this;
     }
 
@@ -55,7 +55,7 @@ public class ShopPage extends HelperBase {
         return this;
     }
 
-    public boolean cartWidgetIsDisplayed(){
+    public boolean cartWidgetIsDisplayed() {
         return isElementOnPage(cartWidgetLocator);
     }
 

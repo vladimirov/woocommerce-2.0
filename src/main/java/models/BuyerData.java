@@ -9,7 +9,6 @@ public class BuyerData {
     private String address = "Test Address";
     private String city = "TestCity";
     private String state = "TestState";
-    //    private String post = String.valueOf(System.currentTimeMillis());
     private int post = gen();
     private long phone = System.currentTimeMillis();
 
@@ -52,7 +51,7 @@ public class BuyerData {
     }
 
     public int gen() {
-        Random r = new Random( System.currentTimeMillis() );
+        Random r = new Random(System.currentTimeMillis());
         return ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
     }
 

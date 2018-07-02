@@ -108,7 +108,7 @@ public class AdminTaxPage extends HelperBase {
         return this;
     }
 
-   public AdminTaxPage addNewAdditionalTaxClass() {
+    public AdminTaxPage addNewAdditionalTaxClass() {
         type(additionalTaxClassesLocator, additionalTax);
         return this;
     }

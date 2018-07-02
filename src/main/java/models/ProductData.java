@@ -1,8 +1,5 @@
 package models;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.util.Objects;
 import java.util.Random;
 
 /**
