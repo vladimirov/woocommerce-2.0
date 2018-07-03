@@ -12,11 +12,6 @@ public class AdminCouponPage extends HelperBase {
         super(driver);
     }
 
-    private String couponCode = "code-" + new Date().getTime();
-    private String description = "Test coupon";
-    private String couponAmount = "100";
-    private String successMessage = "Coupon updated.";
-
     private By wooCommerceMenuLocator = By.xpath(".//*[@id='toplevel_page_woocommerce']/a/div[3]");
     private By couponsMenuLocator = By.xpath(".//*[@id='toplevel_page_woocommerce']/ul/li[3]/a");
     private By addCouponButtonLocator = By.xpath("//*[@id='wpbody-content']/div[3]/a");
@@ -64,7 +59,7 @@ public class AdminCouponPage extends HelperBase {
     }
 
     public AdminCouponPage insertCouponAmount() {
-        type(couponAmountLocator, couponAmount);
+        type(couponAmountLocator, "100");
         return this;
     }
 
@@ -79,12 +74,12 @@ public class AdminCouponPage extends HelperBase {
     }
 
     public AdminCouponPage insertCouponCode() {
-        type(couponCodeTextFieldLocator, couponCode);
+        type(couponCodeTextFieldLocator, "code-" + new Date().getTime());
         return this;
     }
 
     public AdminCouponPage insertDescription() {
-        type(descriptionTextFieldLocator, description);
+        type(descriptionTextFieldLocator, "Test coupon");
         return this;
     }
 
@@ -94,12 +89,16 @@ public class AdminCouponPage extends HelperBase {
     }
 
     public boolean successMessageIsDisplayed() {
-        return textIsDisplayed(couponUpdatedMessageLocator, successMessage);
+        return textIsDisplayed(couponUpdatedMessageLocator, "Coupon updated.");
     }
 
     public AdminCouponPage moveToTrashTestCoupon() {
         click(moveToTrashButtonLocator);
         return this;
+    }
+
+    public boolean successDeletionMessageIsDisplayed() {
+        return textIsDisplayed(couponUpdatedMessageLocator, "1 coupon moved to the Trash. Undo");
     }
 
 }

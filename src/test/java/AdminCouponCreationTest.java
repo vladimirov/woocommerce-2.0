@@ -1,3 +1,4 @@
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
@@ -23,5 +24,12 @@ public class AdminCouponCreationTest extends TestBase {
 
         assertTrue(app.adminCouponPage().successMessageIsDisplayed());
     }
+
+    @AfterMethod
+    public void deleteTestCoupon () {
+        app.adminCouponPage().moveToTrashTestCoupon();
+        assertTrue(app.adminCouponPage().successDeletionMessageIsDisplayed());
+    }
+
 
 }
