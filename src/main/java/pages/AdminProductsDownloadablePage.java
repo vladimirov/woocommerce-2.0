@@ -10,7 +10,6 @@ public class AdminProductsDownloadablePage extends HelperBase {
         super(driver);
     }
 
-    private String successMessage = "Your settings have been saved.";
 
     private By wooCommerceMenuLocator = By.id("toplevel_page_woocommerce");
     private By settingsMenuLocator = By.xpath("//*[@id='toplevel_page_woocommerce']/ul/li[5]/a");
@@ -73,7 +72,7 @@ public class AdminProductsDownloadablePage extends HelperBase {
     }
 
     public boolean successMessageIsDisplayed() {
-        return textIsDisplayed(settingsSavedMessageLocator, successMessage);
+        return textIsDisplayed(settingsSavedMessageLocator, "Your settings have been saved.");
     }
 
 }

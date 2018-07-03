@@ -10,8 +10,6 @@ public class AdminOrderPage extends HelperBase {
         super(driver);
     }
 
-    private String successMessage = "Order status changed from Pending payment to Processing.";
-
     private By wooMenuLocator = By.id("toplevel_page_woocommerce");
     private By ordersMenuLocator = By.xpath("//ul[@class='wp-submenu wp-submenu-wrap']/li[2]/a[@href='edit.php?post_type=shop_order']");
     private By addOrderButtonLocator = By.xpath("//*[@id='wpbody-content']/div[3]/a[1]");
@@ -54,7 +52,7 @@ public class AdminOrderPage extends HelperBase {
     }
 
     public boolean orderNoteMessageIsDisplayed() {
-        return textIsDisplayed(noteTextLocator, successMessage);
+        return textIsDisplayed(noteTextLocator, "Order status changed from Pending payment to Processing.");
     }
 
     public String orderNumberOnOrderCreationPage() {
@@ -62,9 +60,7 @@ public class AdminOrderPage extends HelperBase {
     }
 
     public String orderNumberOnOrdersListPage() {
-        return extractElementPartialText(orderHeadingInOrdersLocator, 1, 4).replaceAll("\\s+", "");
-
-        //4
+        return extractElementPartialText(orderHeadingInOrdersLocator, 1, 4).replaceAll("\\s+", "");//4
     }
 
     public void moveToTrashTestOrder() {

@@ -31,13 +31,12 @@ public class ProductCreationTest extends TestBase {
         assertEquals(app.adminProductPage().price, app.productPage().actualProductPrice());
     }
 
-//    @AfterMethod
-//    public void deleteTestProduct() {
-//        app.openAdminUrl();
-//        app.adminProductPage().clickOnProductsMenu();
-//        app.adminProductPage().clickOnAllProductsDropdown();
-//        app.adminProductPage().moveToTrashTestProduct();
-//
-//        assertTrue(app.adminProductPage().noProductsFoundTextIsDisplayed());
-//    }
+    @AfterMethod
+    public void deleteTestProduct() {
+        app.openAdminUrl();
+        app.adminProductPage().clickOnProductsMenu();
+        app.adminProductPage().clickOnAllProductsDropdown();
+        app.adminProductPage().moveToTrashTestProduct();
+        assertTrue(app.adminProductPage().noProductsFoundTextIsDisplayed());
+    }
 }

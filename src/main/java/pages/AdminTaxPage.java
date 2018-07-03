@@ -10,9 +10,6 @@ public class AdminTaxPage extends HelperBase {
         super(driver);
     }
 
-    String successMessage = "Your settings have been saved.";
-    String additionalTax = "Fancy";
-
     private By wooCommerceMenuLocator = By.id("toplevel_page_woocommerce");
     private By settingsMenuLocator = By.xpath("//*[@id='toplevel_page_woocommerce']/ul/li[5]/a");
     private By taxTabLocator = By.xpath("//*[@id='mainform']/nav/a[3]");
@@ -100,7 +97,7 @@ public class AdminTaxPage extends HelperBase {
     }
 
     public boolean successMessageIsDisplayed() {
-        return textIsDisplayed(settingsSavedMessageLocator, successMessage);
+        return textIsDisplayed(settingsSavedMessageLocator, "Your settings have been saved.");
     }
 
     public AdminTaxPage removeAdditionalTaxClasses() {
@@ -109,7 +106,7 @@ public class AdminTaxPage extends HelperBase {
     }
 
     public AdminTaxPage addNewAdditionalTaxClass() {
-        type(additionalTaxClassesLocator, additionalTax);
+        type(additionalTaxClassesLocator, "Fancy");
         return this;
     }
 

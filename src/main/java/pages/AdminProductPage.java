@@ -26,22 +26,10 @@ public class AdminProductPage extends HelperBase {
     public float price = newProduct.getPrice();
     public String description = newProduct.getDescription();
 
-    private String attributeName = "Size";
-    private String firstTestAttribute = "M";
-    private String secondTestAttribute = "L";
-
     private By productsMenuLocator = By.id("menu-posts-product");
     private By allProductsDropdownLocator = By.xpath("//li[@id='menu-posts-product']/ul/li[2]");
-
     private By productSearchInAdminLocator = By.id("post-search-input");
     private By productSearchInAdminButtonLocator = By.id("search-submit");
-    private By attributesMenuLocator = By.xpath("//a[@href='edit.php?post_type=product&page=product_attributes']");
-    private By addAttributeButtonLocator = By.name("add_new_attribute");
-    private By testAttributeLocator = By.xpath("//a[contains(text(),'Size')]");
-    private By testAttributeNameLocator = By.id("tag-name");
-    private By addNewSizeButtonLocator = By.cssSelector("input#submit");
-    private By firstTestAttributeLocator = By.xpath("//a[contains(text(),'M')]");
-    private By secondTestAttributeLocator = By.xpath("//a[contains(text(),'L')]");
     private By addNewProductButtonLocator = By.xpath("//div[@class='wrap']/a[1]");
     private By productNameLocator = By.xpath(".//*[@id='title']");
     private By productDescriptionLocator = By.id("tinymce");
@@ -58,57 +46,6 @@ public class AdminProductPage extends HelperBase {
     private By productDeletedMessageLocator = By.id("message");
     private By productNameInCartLocator = By.xpath("//*[@class='product-name']/a");
     private By noProductsFoundMessageLocator = By.cssSelector("td.colspanchange");
-    //Variable product
-    private By productTypeLocator = By.id("product-type");
-    private By variableProductLocator = By.xpath("//select[@id='product-type']/optgroup/option[4]");
-    private By attributesTabLocator = By.cssSelector("li.attribute_options.attribute_tab");
-    private By addCustomAttributeButtonLocator = By.cssSelector("button.button.add_attribute");
-    private By usedForVariationsCheckboxLocator = By.xpath("//input[@name='attribute_variation[0]']");
-    private By variationsTabLocator = By.xpath("//a[@href='#variable_product_options']");
-    private By saveAttributesButtonLocator = By.cssSelector("button.button.save_attributes.button-primary");
-    private By attributeNameInputLocator = By.cssSelector("input.attribute_name");
-    private By attributeValuesInputLocator = By.name("attribute_values[0]");
-    private By goButtonLocator = By.cssSelector("a.button bulk_edit do_variation_action");
-    private By goButtonAddVariationLocator = By.cssSelector("a.button bulk_edit do_variation_action");
-
-    //Variable product - create test attributes
-    public AdminProductPage chooseProductType() {
-        click(productTypeLocator);
-        click(variableProductLocator);
-        return this;
-    }
-
-    public AdminProductPage setAttributes() {
-        click(attributesTabLocator);
-        click(addCustomAttributeButtonLocator);
-        type(attributeNameInputLocator, attributeName);
-        type(attributeValuesInputLocator, firstTestAttribute + "|" + secondTestAttribute);
-        click(variationsTabLocator);
-        click(attributesTabLocator);
-        click(usedForVariationsCheckboxLocator);
-        click(saveAttributesButtonLocator);
-        return this;
-    }
-
-    public AdminProductPage setVariations() {
-//        waitToBePresentAndClick(By.xpath("//a[@href='#general_product_data']"));
-//        waitToBePresentAndClick(By.id("new-tag-product_tag"));
-//        waitToBeStale(variationsTabLocator);
-        // Waiting 30 seconds for an element to be present on the page, checking
-        // for its presence once every 5 seconds.
-
-        Wait wait = new FluentWait(driver)
-                .withTimeout(5, SECONDS)
-                .pollingEvery(3, SECONDS)
-                .ignoring(TimeoutException.class);
-
-        wait.until((Function) variableProductLocator);
-
-        click(variationsTabLocator);
-        click(goButtonLocator);
-        click(goButtonAddVariationLocator);
-        return this;
-    }
 
 
     public AdminProductPage clickOnProductsMenu() {
@@ -189,11 +126,6 @@ public class AdminProductPage extends HelperBase {
         click(trashButtonLocator);
         waitToBePresent(productDeletedMessageLocator);
         return this;
-    }
-
-    //Name that displays on Cart Page
-    public boolean newSimpleProductIsDisplayedInCart() {
-        return textIsDisplayed(productNameInCartLocator, name);
     }
 
     public boolean noProductsFoundTextIsDisplayed() {

@@ -11,9 +11,6 @@ public class AdminGeneralSettingsPage extends HelperBase {
         super(driver);
     }
 
-    String active = "active";
-    String successMessage = "Your settings have been saved.";
-    String baseLocation = "United States (US)";
     String sellingLocation = "United States (US) test";
 
     private By wooCommerceMenuLocator = By.id("toplevel_page_woocommerce");//AdminOrdersPage
@@ -58,7 +55,7 @@ public class AdminGeneralSettingsPage extends HelperBase {
     }
 
     public boolean generalTabIsActive() {
-        return elementHasClass(generalTabLocator, active);
+        return elementHasClass(generalTabLocator, "active");
     }
 
     public AdminGeneralSettingsPage clickOnSellingLocationDropdown() {
@@ -78,7 +75,7 @@ public class AdminGeneralSettingsPage extends HelperBase {
     }
 
     public boolean successMessageIsDisplayed() {
-        return textIsDisplayed(settingsSavedMessageLocator, successMessage);
+        return textIsDisplayed(settingsSavedMessageLocator, "Your settings have been saved.");
     }
 
 
@@ -89,7 +86,7 @@ public class AdminGeneralSettingsPage extends HelperBase {
 
     public AdminGeneralSettingsPage setBaseLocation() {
         click(locationInputLocator);
-        type(locationInputLocator, baseLocation);
+        type(locationInputLocator, "United States (US)");
         click(searchResultLocator);
         return this;
     }
