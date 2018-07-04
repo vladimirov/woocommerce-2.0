@@ -18,7 +18,7 @@ public class ApplicationManager {
     WebDriver driver;
     private String browser;
 
-    private SessionHelper sessionHelper;
+    private LoginPage loginPage;
     private SiteHelper siteHelper;
     private AdminHelper adminHelper;
     private AdminCouponPage adminCouponPage;
@@ -81,8 +81,8 @@ public class ApplicationManager {
 
     public void loginToAdmin() {
         driver.get(properties.getProperty("web.adminUrl"));
-        sessionHelper = new SessionHelper(driver);
-        sessionHelper.loginToAdmin(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
+        loginPage = new LoginPage(driver);
+        loginPage.loginToAdmin(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
     }
 
     public void openBaseUrl() {
