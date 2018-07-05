@@ -41,7 +41,7 @@ public class PlaceOrderTest extends TestBase {
 
         //Validate order number in admin
         String orderNumber = app.checkoutPage().orderNumberOnOrdersPage();
-        app.login();
+        app.loginToAdmin();
         app.adminOrderPage().goToOrdersMenu();
         assertEquals(orderNumber, app.adminOrderPage().orderNumberOnOrdersListPage());
 

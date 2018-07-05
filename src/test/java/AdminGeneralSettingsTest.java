@@ -9,7 +9,7 @@ public class AdminGeneralSettingsTest extends TestBase {
     //TODO Extract in one class
     @BeforeMethod
     public void gotoWoocommerceSettings() {
-        app.login();
+        app.loginToAdmin();
         app.adminSettingsGeneralPage().clickOnWooCommerceMenu();
         app.adminSettingsGeneralPage().clickOnSettingsMenu();
     }
