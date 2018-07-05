@@ -9,7 +9,7 @@ public class ProductCreationTest extends TestBase {
 
     @Test(groups = {"end2end"})
     public void addNewProduct() {
-        app.loginToAdmin();
+        app.login();
         app.adminProductPage().clickOnProductsMenu();
         app.adminProductPage().clickOnAllProductsDropdown();
         app.adminProductPage().clickOnAddNewProductButton();

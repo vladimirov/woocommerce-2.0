@@ -9,7 +9,7 @@ public class AdminTaxTest extends TestBase {
     //TODO Extract in one class
     @BeforeMethod
     public void gotoWoocommerceSettings() {
-        app.loginToAdmin();
+        app.login();
         app.adminSettingsGeneralPage().clickOnWooCommerceMenu();
         app.adminSettingsGeneralPage().clickOnSettingsMenu();
     }

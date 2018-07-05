@@ -8,7 +8,7 @@ public class AdminOrderCreationTest extends TestBase {
 
     @Test(groups = {"admin"})
     public void addNewOrder() {
-        app.loginToAdmin();
+        app.login();
         app.adminOrderPage().goToOrdersMenu();
         app.adminOrderPage().clickOnAddOrderButton();
         app.adminOrderPage().clickOnOrderStatusField();

@@ -8,7 +8,7 @@ public class AdminCouponCreationTest extends TestBase {
 
     @Test(groups = {"admin"})
     public void addNewCoupon() {
-        app.loginToAdmin();
+        app.login();
         app.adminCouponPage().clickOnWooCommerceMenu();
         app.adminCouponPage().clickOnWooCommerceMenu();
         app.adminCouponPage().clickOnCouponsMenu();

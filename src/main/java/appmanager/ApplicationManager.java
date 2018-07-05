@@ -79,7 +79,7 @@ public class ApplicationManager {
         shopPage = new ShopPage(driver);
     }
 
-    public void loginToAdmin() {
+    public void login() {
         driver.get(properties.getProperty("web.adminUrl"));
         loginPage = new LoginPage(driver);
         loginPage.loginToAdmin(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
