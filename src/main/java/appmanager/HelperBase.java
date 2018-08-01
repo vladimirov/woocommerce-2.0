@@ -201,7 +201,6 @@ public class HelperBase {
     protected boolean elementHasClass(By locator, String active) {
         logger.info("WAIT ELEMENT TO BE PRESENT: " + locator);
         element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-
         String classes = element.getAttribute("class");
         for (String c : classes.split("-")) {
             if (c.equals(active)) {
